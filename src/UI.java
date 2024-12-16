@@ -6,11 +6,10 @@ import java.awt.event.ActionListener;
 public class UI extends JFrame implements ActionListener {
     public JButton playPauseButton;
     public JButton skipButton;
-    public JTextField searchTextField;
-    public JLabel searchBarBackground;
     public boolean musicPlaying = false; // Keeps track of the state (play or pause)
     public boolean skipButtonPressed = false;
     public MusicPlayer musicPlayer;
+
 
     public UI() {
         setLayout(null);
@@ -21,26 +20,6 @@ public class UI extends JFrame implements ActionListener {
 
         Color customColour = new Color(30, 31, 34);
         getContentPane().setBackground(customColour);
-
-        // Create the top bar for the search bar
-        JPanel topBar = new JPanel();
-        topBar.setBounds(0, 0, 1250, 100);
-        topBar.setLayout(null); // Allow custom placement of components
-        topBar.setBackground(Color.black); // Match the frame background
-        add(topBar);
-
-        // Create a search bar background (use an image if available)
-        searchBarBackground = new JLabel(createImageIcon("search_bar_bg.png")); // Replace with your image path
-        searchBarBackground.setBounds(425, 20, 400, 60); // Adjust these values for proper alignment
-        searchBarBackground.setLayout(new BorderLayout()); // Allow adding components like text fields
-        topBar.add(searchBarBackground);
-
-        // Create a text field
-        searchTextField = new JTextField();
-        searchTextField.setFont(new Font("Arial", Font.PLAIN, 16));
-        searchTextField.setHorizontalAlignment(JTextField.CENTER);
-        searchTextField.setBorder(null); // Remove default border for cleaner look
-        searchBarBackground.add(searchTextField, BorderLayout.CENTER);
 
         // Create the bottom bar background
         JPanel bottomBar = new JPanel();
@@ -64,11 +43,14 @@ public class UI extends JFrame implements ActionListener {
         skipButton.setContentAreaFilled(false); // Make button background transparent
         skipButton.addActionListener(this);
 
+
         bottomBar.add(playPauseButton); // Add the button to the panel
         bottomBar.add(skipButton);
 
+        // Ensure the bottom bar is added to the frame
         add(bottomBar);
     }
+
 
     protected static ImageIcon createImageIcon(String path) {
         java.net.URL imgURL = UI.class.getResource(path);
@@ -79,12 +61,14 @@ public class UI extends JFrame implements ActionListener {
         }
     }
 
+
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
 
         if (source == skipButton) {
             musicPlayer.skipSong();
         }
+
 
         if (source == playPauseButton) {
             if (musicPlaying) {
@@ -96,9 +80,8 @@ public class UI extends JFrame implements ActionListener {
             }
             musicPlaying = !musicPlaying;
         }
+
+
     }
 
-    public static void main(String[] args) {
-        new UI();
-    }
 }
