@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class UI extends JFrame implements ActionListener {
     public JButton playPauseButton;
     public JButton skipButton;
+    public JLabel SearchBar;
     public boolean musicPlaying = false; // Keeps track of the state (play or pause)
     public boolean skipButtonPressed = false;
     public MusicPlayer musicPlayer;
@@ -44,11 +45,19 @@ public class UI extends JFrame implements ActionListener {
         skipButton.addActionListener(this);
 
 
+        // Create a Search bar
+        SearchBar = new JLabel("Search for a song");
+//        SearchBar.setIcon(createImageIcon("");
+        SearchBar.setBorder(BorderFactory.createEmptyBorder(1,1,1,1));
+
+
+
         bottomBar.add(playPauseButton); // Add the button to the panel
         bottomBar.add(skipButton);
 
-        // Ensure the bottom bar is added to the frame
+
         add(bottomBar);
+        add(SearchBar);
     }
 
 
