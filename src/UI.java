@@ -6,9 +6,11 @@ import java.awt.event.ActionListener;
 public class UI extends JFrame implements ActionListener {
     public JButton playPauseButton;
     public JButton skipButton;
-    public JTextField searchTextField;
     public JLabel searchBarBackground;
-    public boolean musicPlaying = false; //  track the state (playing or pause)
+    public JLabel searchBarBg;
+    public JTextField searchTextField;
+
+    public boolean musicPlaying = false;
     public MusicPlayer musicPlayer;
 
     public UI() {
@@ -21,65 +23,131 @@ public class UI extends JFrame implements ActionListener {
         Color customColour = new Color(30, 31, 34);
         getContentPane().setBackground(Color.black);
 
-        // Create the top bar for the search bar
-        JPanel topBar = new JPanel();
-        topBar.setBounds(0, 0, 1250, 100);
-        topBar.setLayout(null); // Allow custom placement of components
-        topBar.setBackground(Color.black); // Match the frame background
-        add(topBar);
-
         JLabel logoLabel = new JLabel(createImageIcon("botify_logo.png")); // Replace with the logo file name
         logoLabel.setBounds(10, 10, 100, 80); // Adjust position and size of the logo
-        topBar.add(logoLabel);
+        add(logoLabel);
 
-        // Create a search bar background (use an image if available)
         searchBarBackground = new JLabel();
-        searchBarBackground.setBounds(425, 20, 400, 60);
-        searchBarBackground.setLayout(new BorderLayout());
-        topBar.add(searchBarBackground);
+        searchBarBackground.setBounds(400, 20, 500, 100);
+        searchBarBackground.setLayout(null);
+        add(searchBarBackground);
 
-        // Create a text field
         searchTextField = new JTextField();
-        searchTextField.setBackground(new Color(240, 240, 240));
+        searchTextField.setOpaque(false);
+        searchTextField.setBackground(new Color(0, 0, 0, 0));
+        searchTextField.setForeground(Color.WHITE);
         searchTextField.setFont(new Font("Arial", Font.PLAIN, 16));
-//        searchTextField.setBorder(null); // Remove default border for cleaner look
-        searchBarBackground.add(searchTextField, BorderLayout.CENTER);
+        searchTextField.setBorder(null);
+        searchTextField.setBounds(0, 0, 500, 100); // Adjusted bounds for proper overlap
+        searchBarBackground.add(searchTextField);
 
-        // Create the bottom bar background
+        searchBarBg = new JLabel(createImageIcon("search_bar_bg.png"));
+        searchBarBg.setBounds(0, 0, 500, 100); // Adjust the bounds for the image
+        searchBarBackground.add(searchBarBg);
+
         JPanel bottomBar = new JPanel();
         bottomBar.setBounds(0, 775, 1300, 150);
         bottomBar.setBackground(Color.black);
         add(bottomBar);
 
-        // Create play/pause button and set its position
         playPauseButton = new JButton();
         playPauseButton.setBounds(575, 800, 1, 50);
         playPauseButton.setIcon(createImageIcon("play_icon.png"));
-        playPauseButton.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1)); // adds/removes outline of hitbox
-        playPauseButton.setContentAreaFilled(false); // transparent bg
-        playPauseButton.addActionListener(this); // adds to actionlistener to allow it to work
+        playPauseButton.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        playPauseButton.setContentAreaFilled(false);
+        playPauseButton.addActionListener(this);
 
-        // Create Skip Button
         skipButton = new JButton();
         skipButton.setBounds(800, 800, 100, 50);
         skipButton.setIcon(createImageIcon("skip_icon.png"));
         skipButton.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        skipButton.setContentAreaFilled(false); // Make button background transparent
+        skipButton.setContentAreaFilled(false);
         skipButton.addActionListener(this);
 
-        bottomBar.add(playPauseButton); // Add the button to the panel
+        bottomBar.add(playPauseButton);
         bottomBar.add(skipButton);
 
         add(bottomBar);
 
-        // Main panels with rounded corners
+
+        // Daily mix panels
+        JLabel dailyMixesLabel = new JLabel("Made For You");
+        dailyMixesLabel.setFont(new Font("Arial", Font.BOLD, 27));
+        dailyMixesLabel.setForeground(Color.WHITE); // Set text color
+        dailyMixesLabel.setBounds(185, 145, 280, 30);
+
+        JLabel dailyMixesLabel2 = new JLabel("Set tha' mood");
+        dailyMixesLabel2.setFont(new Font("Arial", Font.BOLD, 27));
+        dailyMixesLabel2.setForeground(Color.WHITE); // Set text color
+        dailyMixesLabel2.setBounds(185, 450, 280, 30);
+
+        // Daily Mix Backgrounds
+        add(dailyMixesLabel);
+        add(dailyMixesLabel2);
+
+
+        String[] dailyMixFiles = {"dailymix1.png", "dailymix2.png", "dailymix3.png", "dailymix4.png"};
+        int mixesX = 192;
+        int yPositionDailyMix = 220;
+        int yPositionHottestHits = 520;
+        int MixesWidth = 196;
+        int MixesHeight = 194;
+        int MixingSpacing = 255;
+
+        for (int i = 0; i < dailyMixFiles.length; i++) {
+            JButton dailyMixButton = new JButton("");
+            dailyMixButton.setBounds(mixesX + (i * MixingSpacing), yPositionDailyMix, MixesWidth, MixesHeight);
+            dailyMixButton.setIcon(createImageIcon(dailyMixFiles[i]));
+            dailyMixButton.setBorderPainted(false);
+            dailyMixButton.setFocusPainted(false);
+            dailyMixButton.setOpaque(false);
+
+            add(dailyMixButton);
+        }
+
+        String[] hottestHitsFiles = {"hottesthits1.png", "hottesthits2.png", "hottesthits3.png", "hottesthits4.png"};
+
+        for (int i = 0; i < hottestHitsFiles.length; i++) {
+            JButton hottestHitsButton = new JButton();
+            hottestHitsButton.setBounds(mixesX + (i * MixingSpacing), yPositionHottestHits, MixesWidth, MixesHeight);
+            hottestHitsButton.setIcon(createImageIcon(hottestHitsFiles[i]));
+            hottestHitsButton.setBorderPainted(false);
+            hottestHitsButton.setFocusPainted(false);
+            hottestHitsButton.setOpaque(false);
+
+            add(hottestHitsButton);
+        }
+
+        int dailyMixX = 149;
+        int dailyMixY = 165;
+        int dailyMixWidth = 280;
+        int dailyMixHeight = 300;
+        int spacing = 255;
+
+
+        for (int i = 0; i < 4; i++) {
+            RoundedSquarePanel dailyMix = new RoundedSquarePanel(Color.BLACK, 200);
+            dailyMix.setBounds(dailyMixX + (i * spacing), dailyMixY, dailyMixWidth, dailyMixHeight);
+            add(dailyMix);
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            RoundedSquarePanel dailyMix = new RoundedSquarePanel(Color.BLACK, 200);
+            dailyMix.setBounds(dailyMixX + (i * spacing), dailyMixY + 300, dailyMixWidth, dailyMixHeight);
+            add(dailyMix);
+        }
+
+        // Main panel
         RoundedSquarePanel mainPanelRounded = new RoundedSquarePanel(new Color(45, 47, 51), 500);
-        mainPanelRounded.setBounds(120, 95, 1100, 690); // Adjust size and position
+        mainPanelRounded.setBounds(120, 95, 1100, 690);
         add(mainPanelRounded);
 
+        // Side panel
         RoundedSquarePanel sidePanelRounded = new RoundedSquarePanel(new Color(45, 47, 51), 300);
-        sidePanelRounded.setBounds(-5, 100, 150, 690); // Adjust size and position
+        sidePanelRounded.setBounds(-5, 100, 150, 690);
         add(sidePanelRounded);
+
     }
 
     protected static ImageIcon createImageIcon(String path) {
@@ -87,8 +155,8 @@ public class UI extends JFrame implements ActionListener {
         if (imgURL != null) {
             return new ImageIcon(imgURL);
         } else {
-            System.out.println("Image not found at path: " + path); // Detailed message
-            return new ImageIcon(); // Return an empty image
+            System.out.println("Image not found at path: " + path);
+            return new ImageIcon();
         }
     }
 
@@ -109,28 +177,29 @@ public class UI extends JFrame implements ActionListener {
             }
             musicPlaying = !musicPlaying;
         }
+
     }
 
     public class RoundedSquarePanel extends JPanel {
         public Color colour;
         public int squareSize;
+
         public RoundedSquarePanel(Color colour, int size) {
             this.colour = colour;
             this.squareSize = size;
-            setOpaque(false); // Makes the background of the panel transparent
-            setPreferredSize(new Dimension(size, size)); // Set the size of the panel (adjust this as needed)
+            setOpaque(false);
+            setPreferredSize(new Dimension(size, size));
         }
 
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
             Graphics2D g2 = (Graphics2D) g;
 
-
             g2.setColor(colour);
 
-            int width = getWidth() - 50;  // makes the squares width based on panel size
-            int height = getHeight() - 50;  // makes the square height based on panel size
-            g2.fillRoundRect(25, 25, width, height, 100, 100); // actually draws the sqaure
+            int width = getWidth() - 50;
+            int height = getHeight() - 50;
+            g2.fillRoundRect(25, 25, width, height, 100, 100);
         }
     }
 
