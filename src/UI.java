@@ -102,8 +102,6 @@ public class UI extends JFrame implements ActionListener {
         int MixesHeight = 194;
         int MixingSpacing = 255;
 
-
-
         for (int i = 0; i < dailyMixFiles.length; i++) {
             JButton dailyMixButton = new JButton("");
             dailyMixButton.setBounds(mixesX + (i * MixingSpacing), yPositionDailyMix, MixesWidth, MixesHeight);
@@ -137,7 +135,26 @@ public class UI extends JFrame implements ActionListener {
             mainPanel.add(hottestHitsButton);
         }
 
+        // Background Panels for Cover Art
+        int dailyMixX = 149;
+        int dailyMixY = 165;
+        int dailyMixWidth = 280;
+        int dailyMixHeight = 300;
+        int spacing = 255;
 
+
+        for (int i = 0; i < 4; i++) {
+            RoundedSquarePanel dailyMix = new RoundedSquarePanel(Color.BLACK, 200);
+            dailyMix.setBounds(dailyMixX + (i * spacing), dailyMixY, dailyMixWidth, dailyMixHeight);
+            mainPanel.add(dailyMix);
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            RoundedSquarePanel dailyMix = new RoundedSquarePanel(Color.BLACK, 200);
+            dailyMix.setBounds(dailyMixX + (i * spacing), dailyMixY + 300, dailyMixWidth, dailyMixHeight);
+            mainPanel.add(dailyMix);
+        }
 
         RoundedSquarePanel mainPanelRounded = new RoundedSquarePanel(new Color(45, 47, 51), 500);
         mainPanelRounded.setBounds(120, 95, 1100, 690);
