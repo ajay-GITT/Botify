@@ -75,7 +75,10 @@ public class MusicPlayer {
 
     public void skipSong() {
         justSkipped = true;
-        historyQueue.addSong(currentSongPath);
+        if (songQueue.isEmpty()) {
+            return;
+        }
+        historyQueue.addSongToFront(currentSongPath);
         currentSongPath = songQueue.getNextSong();
         clipPosition = 0;
         pauseAudio();  // The current song should not play when skipping to the next song
@@ -88,11 +91,24 @@ public class MusicPlayer {
         if (historyQueue.isEmpty() && !("".equals(currentSongPath))) {  // If the music player is actually "holding onto" a song
             clipPosition = 0;  // Return to the beginning of the song
         } else if (!(historyQueue.isEmpty())) {
+            songQueue.addSongToFront(currentSongPath);
             currentSongPath = historyQueue.getNextSong();
             clipPosition = 0;
             pauseAudio();
             isPaused = false;
             playAudio();
         }
+    }
+
+    public SongQueue getSongQueue() {
+        return songQueue;
+    }
+
+    public SongQueue getHistoryQueue() {
+        return historyQueue;
+    }
+
+    public String getCurrentSongPath() {
+        return currentSongPath;
     }
 }

@@ -20,6 +20,10 @@ public class SongQueue {
         songs.add(songName);
     }
 
+    public void addSongToFront(String songName) {
+        songs.add(0, songName);
+    }
+
     public String getNextSong() {
         if (isEmpty()) {
             return ""; // If the list has no elements, exit the method.

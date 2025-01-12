@@ -7,9 +7,6 @@ import java.util.ArrayList;
 public class UI extends JFrame implements ActionListener {
     public JButton playPauseButton;
     public JButton skipButton, prevButton;
-    public JLabel searchBarBackground;
-    public JLabel searchBarBg;
-    public JTextField searchTextField;
     public JButton homeButton;
 
     public boolean musicPlaying = false;
@@ -57,7 +54,7 @@ public class UI extends JFrame implements ActionListener {
         playPauseButton = new JButton();
         playPauseButton.setBounds(575, 800, 1, 50);
         playPauseButton.setIcon(createImageIcon("play_icon.png"));
-        playPauseButton.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        playPauseButton.setBorder(BorderFactory.createEmptyBorder());
         playPauseButton.setContentAreaFilled(false);
         playPauseButton.addActionListener(this);
 
@@ -65,7 +62,7 @@ public class UI extends JFrame implements ActionListener {
         skipButton = new JButton();
         skipButton.setBounds(800, 800, 100, 50);
         skipButton.setIcon(createImageIcon("skip_icon.png"));
-        skipButton.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        skipButton.setBorder(BorderFactory.createEmptyBorder());
         skipButton.setContentAreaFilled(false);
         skipButton.addActionListener(this);
 
@@ -73,7 +70,8 @@ public class UI extends JFrame implements ActionListener {
         prevButton = new JButton();
         prevButton.setBounds(400, 800, 100, 50);
         prevButton.setIcon(createImageIcon("prev_icon.png"));
-        prevButton.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        prevButton.setBorder(BorderFactory.createEmptyBorder(
+        ));
         prevButton.setContentAreaFilled(false);
         prevButton.addActionListener(this);
 
@@ -216,10 +214,63 @@ public class UI extends JFrame implements ActionListener {
         firstPage.add(DailyMix1_Text3);
         firstPage.add(DailyMix1_Text4);
 
+        JButton DM1_1 = new JButton();
+        DM1_1.setBounds(200, 362, 100, 100);
+        DM1_1.setIcon(createImageIcon("superhero.png"));
+        DM1_1.setBorder(BorderFactory.createEmptyBorder());
+        DM1_1.setContentAreaFilled(false);
+        DM1_1.addActionListener(this);
+
+        JButton DM1_2 = new JButton();
+        DM1_2.setBounds(200, 462, 100, 100);
+        DM1_2.setIcon(createImageIcon("lildemons.png"));
+        DM1_2.setBorder(BorderFactory.createEmptyBorder());
+        DM1_2.setContentAreaFilled(false);
+        DM1_2.addActionListener(this);
+
+        JButton DM1_3 = new JButton();
+        DM1_3.setBounds(200, 562, 100, 100);
+        DM1_3.setIcon(createImageIcon("headlines.png"));
+        DM1_3.setBorder(BorderFactory.createEmptyBorder());
+        DM1_3.setContentAreaFilled(false);
+        DM1_3.addActionListener(this);
+
+        JButton DM1_4 = new JButton();
+        DM1_4.setBounds(200, 662, 100, 100);
+        DM1_4.setIcon(createImageIcon("norolemodelz.png"));
+        DM1_4.setBorder(BorderFactory.createEmptyBorder());
+        DM1_4.setContentAreaFilled(false);
+        DM1_4.addActionListener(this);
+
+        JButton DM1_5 = new JButton();
+        DM1_5.setBounds(200, 762, 100, 100);
+        DM1_5.setIcon(createImageIcon("zoots.png"));
+        DM1_5.setBorder(BorderFactory.createEmptyBorder());
+        DM1_5.setContentAreaFilled(false);
+        DM1_5.addActionListener(this);
+
+        firstPage.add(DM1_1);
+        firstPage.add(DM1_2);
+        firstPage.add(DM1_3);
+        firstPage.add(DM1_4);
+        firstPage.add(DM1_5);
+
+        int playPause1_y = 362; // Initial y position
+
+        for (int i = 0; i < 5; i++) {
+            JButton playPausePg1 = new JButton();
+            playPausePg1.setBounds(100, playPause1_y, 100, 100); // Set bounds with playPause1_y
+            playPausePg1.setIcon(createImageIcon("play_1.png"));
+            playPausePg1.setBorder(BorderFactory.createEmptyBorder());
+            playPausePg1.setContentAreaFilled(false);
+            playPausePg1.addActionListener(this);
+            firstPage.add(playPausePg1);
+
+            playPause1_y += 100; // Increment playPause1_y for the next button
+        }
+
 
         // Images;
-
-
 
         // Page Two:
         JPanel secondPage = pages.get(1);
@@ -277,10 +328,10 @@ public class UI extends JFrame implements ActionListener {
         DailyMix3_Text4.setBounds(292,236,300,50);
 
 
-        thirdPage.add(DailyMix2_Text);
-        thirdPage.add(DailyMix2_Text2);
-        thirdPage.add(DailyMix2_Text3);
-        thirdPage.add(DailyMix2_Text4);
+        thirdPage.add(DailyMix3_Text);
+        thirdPage.add(DailyMix3_Text2);
+        thirdPage.add(DailyMix3_Text3);
+        thirdPage.add(DailyMix3_Text4);
 
 
         // Fourth Page:
@@ -446,20 +497,20 @@ public class UI extends JFrame implements ActionListener {
             JButton iconImages = new JButton();
             iconImages.setBounds(80, 110, 200, 200);
             iconImages.setIcon(createImageIcon(icon_paths.get(i)));
-            iconImages.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+            iconImages.setBorder(BorderFactory.createEmptyBorder());
             iconImages.setContentAreaFilled(false);
             iconImages.addActionListener(this);
 
-//             HomeButton:
-//            homeButton = new JButton(createImageIcon("home_icon.png"));
-//            homeButton.setBounds(800, 220, 30, 30);
-//            homeButton.setBorderPainted(false);
-//            homeButton.setContentAreaFilled(false);
-//            homeButton.addActionListener(new ActionListener() {
-//                public void actionPerformed(ActionEvent e) {
-//                    goToMainPage();
-//                }
-//            });
+             HomeButton:
+            homeButton = new JButton(createImageIcon("home_icon.png"));
+            homeButton.setBounds(800, 220, 30, 30);
+            homeButton.setBorderPainted(false);
+            homeButton.setContentAreaFilled(false);
+            homeButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    goToMainPage(current_page);
+                }
+            });
 
             // Top Panel
             RoundedSquarePanel CoverArtTopPanel = new RoundedSquarePanel(new Color(45, 47, 51), 500);
@@ -489,7 +540,7 @@ public class UI extends JFrame implements ActionListener {
             // Adding
             current_page.add(logoLabel_2);
             current_page.add(iconImages);
-//            current_page.add(homeButton);
+            current_page.add(homeButton);
             current_page.add(PlaylistPanel);
             current_page.add(CoverArtMainPanel);
             current_page.add(CoverArtTopPanel);
@@ -506,9 +557,10 @@ public class UI extends JFrame implements ActionListener {
         page.setVisible(true);
     }
 
-    private void goToMainPage() {
+    private void goToMainPage(JPanel page) {
         blackPage.setVisible(false);
         mainPanel.setVisible(true);
+        page.setVisible(false);
     }
 
     protected static ImageIcon createImageIcon(String path) {
@@ -523,6 +575,10 @@ public class UI extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
+        System.out.println("Current Song Path: " + musicPlayer.getCurrentSongPath());
+        System.out.println(musicPlayer.getSongQueue());
+        System.out.println(musicPlayer.getHistoryQueue());
+
 
         if (musicPlaying) {
             if (source == skipButton) {
