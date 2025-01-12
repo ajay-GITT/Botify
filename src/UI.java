@@ -217,6 +217,10 @@ public class UI extends JFrame implements ActionListener {
         firstPage.add(DailyMix1_Text4);
 
 
+        // Images;
+
+
+
         // Page Two:
         JPanel secondPage = pages.get(1);
 
@@ -471,12 +475,11 @@ public class UI extends JFrame implements ActionListener {
                 current_page.add(PlaylistPanel);
                 playlistPanelY = playlistPanelY + 100;
             }
-            current_page.add(CoverArtTopPanel);
 
             // Main Panel
             RoundedSquarePanel CoverArtMainPanel = new RoundedSquarePanel(new Color(45, 47, 51), 500);
             CoverArtMainPanel.setBounds(10, 340, 1200, 545);
-            current_page.add(CoverArtMainPanel);
+
 
 
             // Logo
@@ -488,6 +491,7 @@ public class UI extends JFrame implements ActionListener {
             current_page.add(iconImages);
 //            current_page.add(homeButton);
             current_page.add(PlaylistPanel);
+            current_page.add(CoverArtMainPanel);
             current_page.add(CoverArtTopPanel);
 
 
