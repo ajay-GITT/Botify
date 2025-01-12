@@ -9,16 +9,17 @@ public class MusicPlayer {
     private boolean justSkipped = false;
     private long clipPosition = 0;
     private SongQueue songQueue;
+    private SongQueue historyQueue;
     private String currentSongPath;
 
 
     public MusicPlayer() {
         songQueue = new SongQueue();
+        historyQueue = new SongQueue();
 
         // Fill up the song queue:
         String folderPath = "src/Songs";
         File folder = new File(folderPath);
-
 
         // Check if the folder exists and is a directory
         if (folder.exists() && folder.isDirectory()) {
@@ -74,11 +75,24 @@ public class MusicPlayer {
 
     public void skipSong() {
         justSkipped = true;
+        historyQueue.addSong(currentSongPath);
         currentSongPath = songQueue.getNextSong();
         clipPosition = 0;
-        pauseAudio();
-        isPaused = false;
+        pauseAudio();  // The current song should not play when skipping to the next song
+        isPaused = false;  // Playing the next song
         playAudio();
     }
 
+    public void prevSong() {
+        justSkipped = true;
+        if (historyQueue.isEmpty() && !("".equals(currentSongPath))) {  // If the music player is actually "holding onto" a song
+            clipPosition = 0;  // Return to the beginning of the song
+        } else if (!(historyQueue.isEmpty())) {
+            currentSongPath = historyQueue.getNextSong();
+            clipPosition = 0;
+            pauseAudio();
+            isPaused = false;
+            playAudio();
+        }
+    }
 }

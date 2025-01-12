@@ -2,10 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class UI extends JFrame implements ActionListener {
     public JButton playPauseButton;
-    public JButton skipButton;
+    public JButton skipButton, prevButton;
     public JLabel searchBarBackground;
     public JLabel searchBarBg;
     public JTextField searchTextField;
@@ -15,6 +16,10 @@ public class UI extends JFrame implements ActionListener {
     public MusicPlayer musicPlayer;
     private JPanel mainPanel;
     private JPanel blackPage;
+
+    // List of pages of cover art:
+    private ArrayList<JPanel> pages = new ArrayList<JPanel>();
+    private ArrayList<String> icon_paths = new ArrayList<String>();
 
     public UI() {
         setLayout(null);
@@ -72,6 +77,7 @@ public class UI extends JFrame implements ActionListener {
         playPauseButton.setContentAreaFilled(false);
         playPauseButton.addActionListener(this);
 
+        // Skip Button:
         skipButton = new JButton();
         skipButton.setBounds(800, 800, 100, 50);
         skipButton.setIcon(createImageIcon("skip_icon.png"));
@@ -79,6 +85,22 @@ public class UI extends JFrame implements ActionListener {
         skipButton.setContentAreaFilled(false);
         skipButton.addActionListener(this);
 
+        // Prev Button:
+        prevButton = new JButton();
+        prevButton.setBounds(400, 800, 100, 50);
+        prevButton.setIcon(createImageIcon("prev_icon.png"));
+        prevButton.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        prevButton.setContentAreaFilled(false);
+        prevButton.addActionListener(this);
+
+        // Home Button:
+        homeButton = new JButton(createImageIcon("home_icon.png"));
+        homeButton.setBounds(800, 220, 30, 30);
+        homeButton.setBorderPainted(false);
+        homeButton.setContentAreaFilled(false);
+        homeButton.addActionListener(e -> goToMainPage());
+
+        bottomBar.add(prevButton);
         bottomBar.add(playPauseButton);
         bottomBar.add(skipButton);
 
@@ -87,6 +109,7 @@ public class UI extends JFrame implements ActionListener {
         dailyMixesLabel.setForeground(Color.WHITE);
         dailyMixesLabel.setBounds(185, 145, 280, 30);
         mainPanel.add(dailyMixesLabel);
+        // Page for "Made For You":
 
         JLabel dailyMixesLabel2 = new JLabel("Set tha' mood");
         dailyMixesLabel2.setFont(new Font("Arial", Font.BOLD, 27));
@@ -103,33 +126,56 @@ public class UI extends JFrame implements ActionListener {
         int MixingSpacing = 255;
 
         for (int i = 0; i < dailyMixFiles.length; i++) {
+            icon_paths.add(dailyMixFiles[i]);
+
             JButton dailyMixButton = new JButton("");
             dailyMixButton.setBounds(mixesX + (i * MixingSpacing), yPositionDailyMix, MixesWidth, MixesHeight);
             dailyMixButton.setIcon(createImageIcon(dailyMixFiles[i]));
             dailyMixButton.setBorderPainted(false);
             dailyMixButton.setFocusPainted(false);
             dailyMixButton.setOpaque(false);
+
+            JPanel page = new JPanel(null);
+            page.setBounds(0, 0, getWidth(), getHeight());
+            page.setBackground(Color.BLACK);
+            page.setVisible(false);
+            page.add(homeButton);
+            add(page);
+            pages.add(page);
+
             dailyMixButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    showBlackPage();
+//                    showBlackPage();
+                    showPage(page);
                 }
             });
             mainPanel.add(dailyMixButton);
         }
 
-
         String[] hottestHitsFiles = {"hottesthits1.png", "hottesthits2.png", "hottesthits3.png", "hottesthits4.png"};
 
         for (int i = 0; i < hottestHitsFiles.length; i++) {
+            icon_paths.add(hottestHitsFiles[i]);
+
             JButton hottestHitsButton = new JButton();
             hottestHitsButton.setBounds(mixesX + (i * MixingSpacing), yPositionHottestHits, MixesWidth, MixesHeight);
             hottestHitsButton.setIcon(createImageIcon(hottestHitsFiles[i]));
             hottestHitsButton.setBorderPainted(false);
             hottestHitsButton.setFocusPainted(false);
             hottestHitsButton.setOpaque(false);
+
+            JPanel page = new JPanel(null);
+            page.setBounds(0, 0, getWidth(), getHeight());
+            page.setBackground(Color.BLACK);
+            page.setVisible(false);
+            page.add(homeButton);
+            add(page);
+            pages.add(page);
+
             hottestHitsButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    showBlackPage();
+//                    showBlackPage();
+                    showPage(page);
                 }
             });
             mainPanel.add(hottestHitsButton);
@@ -141,7 +187,6 @@ public class UI extends JFrame implements ActionListener {
         int dailyMixWidth = 280;
         int dailyMixHeight = 300;
         int spacing = 255;
-
 
         for (int i = 0; i < 4; i++) {
             RoundedSquarePanel dailyMix = new RoundedSquarePanel(Color.BLACK, 200);
@@ -164,17 +209,31 @@ public class UI extends JFrame implements ActionListener {
         sidePanelRounded.setBounds(-5, 100, 150, 690);
         mainPanel.add(sidePanelRounded);
 
-        homeButton = new JButton(createImageIcon("home_icon.png"));
-        homeButton.setBounds(800, 220, 30, 30);
-        homeButton.setBorderPainted(false);
-        homeButton.setContentAreaFilled(false);
-        homeButton.addActionListener(e -> goToMainPage());
         blackPage.add(homeButton);
+        for (int i = 0; i < pages.size(); i++) {
+            JPanel current_page = pages.get(i);
+
+            JButton iconImages = new JButton();
+            iconImages.setBounds(300, 200, 200, 200);
+            iconImages.setIcon(createImageIcon(icon_paths.get(i)));
+            iconImages.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+            iconImages.setContentAreaFilled(false);
+            iconImages.addActionListener(this);
+
+            current_page.add(iconImages);
+
+        }
     }
 
     private void showBlackPage() {
         mainPanel.setVisible(false);
         blackPage.setVisible(true);
+    }
+
+    private void showPage(JPanel page) {
+        mainPanel.setVisible(false);
+        blackPage.setVisible(false);
+        page.setVisible(true);
     }
 
     private void goToMainPage() {
@@ -195,8 +254,12 @@ public class UI extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
 
-        if (source == skipButton && musicPlaying) {
-            musicPlayer.skipSong();
+        if (musicPlaying) {
+            if (source == skipButton) {
+                musicPlayer.skipSong();
+            } else if (source == prevButton) {
+                musicPlayer.prevSong();
+            }
         }
 
         if (source == playPauseButton) {

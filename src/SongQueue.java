@@ -28,8 +28,9 @@ public class SongQueue {
             songs.remove(0); // Remove the first song from the queue
             return nextSong; // Return the song we just obtained to where we call the method
         }
-
     }
+
+
 
     public String toString() {
         return songs.toString();
