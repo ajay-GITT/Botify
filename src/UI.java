@@ -195,7 +195,7 @@ public class UI extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
 
-        if (source == skipButton) {
+        if (source == skipButton && musicPlaying) {
             musicPlayer.skipSong();
         }
 
