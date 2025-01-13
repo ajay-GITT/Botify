@@ -654,7 +654,13 @@ public class UI extends JFrame implements ActionListener {
 
             // Grab the specific list from <allPagePlayPauseButtons> (list) according to <pageView>
             // and put that into the <buttonsOnCurrentPage>
-            ArrayList<JButton> buttonsOnCurrentPage = allPagePlayPauseButtons.get(pageView);  // to avoid multiple .get() calls.
+            ArrayList<JButton> buttonsOnCurrentPage;
+            if (source == playPauseButton) {
+                buttonsOnCurrentPage = new ArrayList<>();
+                buttonsOnCurrentPage.add(playPauseButton);
+            } else {
+                buttonsOnCurrentPage = allPagePlayPauseButtons.get(pageView);  // to avoid multiple .get() calls.
+            }
 
             // When the user intends to play another song before pausing the current:
             if (lastButtonPressed != null && lastButtonPressed != currentButton) {
@@ -689,11 +695,6 @@ public class UI extends JFrame implements ActionListener {
                     currentSongQueue.addSongs(songsToAdd); // Adds the songs to add to the queue
                     musicPlayer.skipSong();  // Immediately start playing the first song as enqueued
                 }
-            }
-
-            // TODO: remove this debugging later
-            for (SongDirectory sd : songDirectories) {
-                System.out.println(sd);
             }
 
             musicPlaying = !musicPlaying;
