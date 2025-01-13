@@ -258,6 +258,8 @@ public class UI extends JFrame implements ActionListener {
         DM1_5.setContentAreaFilled(false);
         DM1_5.addActionListener(this);
 
+
+        // Song Directory for Daily mix 1
         SongDirectory dailyMix1 = new SongDirectory("Daily Mix1");
         songDirectories.add(dailyMix1);
 
@@ -267,22 +269,6 @@ public class UI extends JFrame implements ActionListener {
         firstPage.add(DM1_4);
         firstPage.add(DM1_5);
 
-        int playPause1_y = 362; // Initial y position
-
-        ArrayList<JButton> pageOnePlayButtons = new ArrayList<JButton>();
-        for (int i = 0; i < 5; i++) {
-            JButton playPausePg1 = new JButton();
-            playPausePg1.setBounds(100, playPause1_y, 100, 100); // Set bounds with playPause1_y
-            playPausePg1.setIcon(createImageIcon("play_1.png"));
-            playPausePg1.setBorder(BorderFactory.createEmptyBorder());
-            playPausePg1.setContentAreaFilled(false);
-            playPausePg1.addActionListener(this);
-            firstPage.add(playPausePg1);
-            pageOnePlayButtons.add(playPausePg1);
-
-            playPause1_y += 100; // Increment playPause1_y for the next button
-        }
-        allPagePlayPauseButtons.add(pageOnePlayButtons);
 
 
         // Images;
@@ -311,7 +297,9 @@ public class UI extends JFrame implements ActionListener {
         DailyMix2_Text4.setForeground(Color.GRAY);
         DailyMix2_Text4.setBounds(292,236,300,50);
 
-        // TODO: Create SongDirectory object
+        // Song Directory for Daily mix 2
+        SongDirectory dailyMix2 = new SongDirectory("Daily Mix2");
+        songDirectories.add(dailyMix2);
 
         secondPage.add(DailyMix2_Text);
         secondPage.add(DailyMix2_Text2);
@@ -343,7 +331,9 @@ public class UI extends JFrame implements ActionListener {
         DailyMix3_Text4.setForeground(Color.GRAY);
         DailyMix3_Text4.setBounds(292,236,300,50);
 
-        // TODO: Create SongDirectory object
+        // Song Directory for Daily mix 3
+        SongDirectory dailyMix3 = new SongDirectory("Daily Mix3");
+        songDirectories.add(dailyMix3);
 
         thirdPage.add(DailyMix3_Text);
         thirdPage.add(DailyMix3_Text2);
@@ -375,7 +365,9 @@ public class UI extends JFrame implements ActionListener {
         DailyMix4_Text4.setForeground(Color.GRAY);
         DailyMix4_Text4.setBounds(292,236,300,50);
 
-        // TODO: Create SongDirectory object
+        // Song Directory for Daily mix 4
+        SongDirectory dailyMix4 = new SongDirectory("Daily Mix4");
+        songDirectories.add(dailyMix4);
 
         fourthPage.add(DailyMix4_Text);
         fourthPage.add(DailyMix4_Text2);
@@ -407,7 +399,10 @@ public class UI extends JFrame implements ActionListener {
         HottestHits_Text4.setForeground(Color.GRAY);
         HottestHits_Text4.setBounds(292,236,300,50);
 
-        // TODO: Create SongDirectory object
+
+        // Song Directory for Latest Releases
+        SongDirectory latestReleases = new SongDirectory("Latest Releases");
+        songDirectories.add(latestReleases);
 
         fifthPage.add(HottestHits_Text);
         fifthPage.add(HottestHits_Text2);
@@ -439,7 +434,10 @@ public class UI extends JFrame implements ActionListener {
         HottestHits2_Text4.setForeground(Color.GRAY);
         HottestHits2_Text4.setBounds(292,236,300,50);
 
-        // TODO: Create SongDirectory object
+        // Song Directory for Beast Mode
+        SongDirectory beastMode = new SongDirectory("Beast Mode");
+        songDirectories.add(beastMode);
+
 
         sixthPage.add(HottestHits2_Text);
         sixthPage.add(HottestHits2_Text2);
@@ -471,7 +469,9 @@ public class UI extends JFrame implements ActionListener {
         HottestHits3_Text4.setForeground(Color.GRAY);
         HottestHits3_Text4.setBounds(292,236,300,50);
 
-        // TODO: Create SongDirectory object
+        // Song Directory for hot hits
+        SongDirectory hotHits = new SongDirectory("Hot Hits");
+        songDirectories.add(hotHits);
 
         seventhPage.add(HottestHits3_Text);
         seventhPage.add(HottestHits3_Text2);
@@ -502,15 +502,14 @@ public class UI extends JFrame implements ActionListener {
         HottestHits4_Text4.setForeground(Color.GRAY);
         HottestHits4_Text4.setBounds(292,236,300,50);
 
-        // TODO: Create SongDirectory object
+        // Song Directory for hot hits
+        SongDirectory southAsianGems = new SongDirectory("South Asian Gems");
+        songDirectories.add(southAsianGems);
 
         eigthPage.add(HottestHits4_Text);
         eigthPage.add(HottestHits4_Text2);
         eigthPage.add(HottestHits4_Text3);
         eigthPage.add(HottestHits4_Text4);
-
-
-
 
         // Everything that must be repeated through all eight pages
         for (int i = 0; i < pages.size(); i++) {
@@ -523,7 +522,7 @@ public class UI extends JFrame implements ActionListener {
             iconImages.setContentAreaFilled(false);
             iconImages.addActionListener(this);
 
-             HomeButton:
+            // HomeButton:
             homeButton = new JButton(createImageIcon("home_icon.png"));
             homeButton.setBounds(800, 220, 30, 30);
             homeButton.setBorderPainted(false);
@@ -533,6 +532,24 @@ public class UI extends JFrame implements ActionListener {
                     goToMainPage(current_page);
                 }
             });
+
+            // Individual Play/Pause Buttons:
+            int playPause_y = 362; // Initial y position
+
+            ArrayList<JButton> pagePlayButtons = new ArrayList<JButton>();
+            for (int j = 0; j < 5; j++) {
+                JButton playPausePg = new JButton();
+                playPausePg.setBounds(100, playPause_y, 100, 100); // Set bounds with playPause1_y
+                playPausePg.setIcon(createImageIcon("play_1.png"));
+                playPausePg.setBorder(BorderFactory.createEmptyBorder());
+                playPausePg.setContentAreaFilled(false);
+                playPausePg.addActionListener(this);
+                current_page.add(playPausePg);
+                pagePlayButtons.add(playPausePg);
+
+                playPause_y += 100; // Increment playPause1_y for the next button
+            }
+            allPagePlayPauseButtons.add(pagePlayButtons);
 
             // Top Panel
             RoundedSquarePanel CoverArtTopPanel = new RoundedSquarePanel(new Color(45, 47, 51), 500);
@@ -569,8 +586,8 @@ public class UI extends JFrame implements ActionListener {
 
             // Default Page View is Home (-1):
             pageView = -1;
+//            lastCoverArtPageViewed = -1;
         }
-
     }
 
 
@@ -625,15 +642,23 @@ public class UI extends JFrame implements ActionListener {
          *          or if the individual buttons to each cover art page is being activated.
          */
         if (source == playPauseButton || (pageView != -1 && allPagePlayPauseButtons.get(pageView).contains(source))) {
+            // Clear the queue if this is a different page:
+//            if (lastCoverArtPageViewed != pageView) {
+//                musicPlayer.getSongQueue().clearSongQueue();
+//                System.out.println(0);
+//            }
+
             // If this section is reached, then the above condition guarantees that <source> is a JButton object
             JButton currentButton = (JButton) source;  // <source> is also a JButton, cast it to one
             // <source> is the button that is currently pressed
 
-            ArrayList<JButton> buttonsOnCurrentPage = allPagePlayPauseButtons.get(pageView);
+            // Grab the specific list from <allPagePlayPauseButtons> (list) according to <pageView>
+            // and put that into the <buttonsOnCurrentPage>
+            ArrayList<JButton> buttonsOnCurrentPage = allPagePlayPauseButtons.get(pageView);  // to avoid multiple .get() calls.
 
             // When the user intends to play another song before pausing the current:
             if (lastButtonPressed != null && lastButtonPressed != currentButton) {
-                // Reaching here means pressing a new button
+                // Reaching here means pressing a new button (attempting to play a different song)
                 musicPlayer.pauseAudio();  // The music player should pause its current song
             }
 
@@ -641,7 +666,7 @@ public class UI extends JFrame implements ActionListener {
                 musicPlayer.pauseAudio();  // Pause the player
                 playPauseButton.setIcon(createImageIcon("play_icon.png"));
                 if (pageView != -1) {  // pageView != -1 means not on home page (aka on cover art page)
-                    for (int i = 0; i < buttonsOnCurrentPage.size(); i++) {
+                    for (int i = 0; i < buttonsOnCurrentPage.size(); i++) { // if you are not on home page, and you pause, change all icons to play icon.
                         buttonsOnCurrentPage.get(i).setIcon(createImageIcon("play_1.png"));
                     }
                 }
@@ -654,18 +679,28 @@ public class UI extends JFrame implements ActionListener {
                     }
                     currentButton.setIcon(createImageIcon("pause_1.png"));
                     // Add specific songs to the queue:
-                    SongQueue currentSongQueue = musicPlayer.getSongQueue();
-                    currentSongQueue.clearSongQueue();
-                    int songIndex = buttonsOnCurrentPage.indexOf(currentButton);
-                    ArrayList<String> songsOnPage = songDirectories.get(pageView).getSongs();
+                    SongQueue currentSongQueue = musicPlayer.getSongQueue();  // Grab the song queue from the music player
+                    currentSongQueue.clearSongQueue(); // wipes the queue
+                    int songIndex = buttonsOnCurrentPage.indexOf(currentButton);  // Retrieve the position of the button
+                    // from the buttons list (from the current page)
+                    ArrayList<String> songsOnPage = songDirectories.get(pageView).getSongs();  // Retrieve the list of song paths
+                    // Retrieve the spliced sub-ArrayList, starting from where the user intends to play songs: (e.g. song 2 to song 5)
                     ArrayList<String> songsToAdd = new ArrayList<String>(songsOnPage.subList(songIndex, songsOnPage.size()));
-                    currentSongQueue.addSongs(songsToAdd);
+                    currentSongQueue.addSongs(songsToAdd); // Adds the songs to add to the queue
                     musicPlayer.skipSong();  // Immediately start playing the first song as enqueued
                 }
             }
 
+            // TODO: remove this debugging later
+            for (SongDirectory sd : songDirectories) {
+                System.out.println(sd);
+            }
+
             musicPlaying = !musicPlaying;
             lastButtonPressed = currentButton;
+//            if (pageView != -1) {
+//                lastCoverArtPageViewed = pageView;
+//            }
         }
     }
 
