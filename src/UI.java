@@ -8,6 +8,7 @@ public class UI extends JFrame implements ActionListener {
     public JButton playPauseButton;
     public JButton skipButton, prevButton;
     public JButton homeButton;
+    public JButton ClockButton;
 
     // Containers for buttons of specific songs for each page:
     private ArrayList<ArrayList<JButton>> allPagePlayPauseButtons = new ArrayList<ArrayList<JButton>>();
@@ -223,6 +224,107 @@ public class UI extends JFrame implements ActionListener {
         firstPage.add(DailyMix1_Text3);
         firstPage.add(DailyMix1_Text4);
 
+        // Song one info
+        JLabel DailyMix1_TextInfo = new JLabel("Superhero (Heroes & Villains)");
+        DailyMix1_TextInfo.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix1_TextInfo.setForeground(Color.WHITE);
+        DailyMix1_TextInfo.setBounds(290,382,500,50);
+
+        JLabel DailyMix1_TextInfo2 = new JLabel("Future, Metroboomin");
+        DailyMix1_TextInfo2.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix1_TextInfo2.setForeground(Color.GRAY);
+        DailyMix1_TextInfo2.setBounds(290,405,500,50);
+
+        JLabel DailyMix1_TextInfo3 = new JLabel("3:02");
+        DailyMix1_TextInfo3.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix1_TextInfo3.setForeground(Color.GRAY);
+        DailyMix1_TextInfo3.setBounds(1021,404,500,50);
+
+        firstPage.add(DailyMix1_TextInfo);
+        firstPage.add(DailyMix1_TextInfo2);
+        firstPage.add(DailyMix1_TextInfo3);
+
+        // Song Two info
+        JLabel DailyMix1_TextInfo_song2 = new JLabel("LIL DEMON");
+        DailyMix1_TextInfo_song2.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix1_TextInfo_song2.setForeground(Color.WHITE);
+        DailyMix1_TextInfo_song2.setBounds(290,482,500,50);
+
+        JLabel DailyMix1_TextInfo2_song2 = new JLabel("Future");
+        DailyMix1_TextInfo2_song2.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix1_TextInfo2_song2.setForeground(Color.GRAY);
+        DailyMix1_TextInfo2_song2.setBounds(290,505,500,50);
+
+        JLabel DailyMix1_TextInfo3_song2 = new JLabel("2:19");
+        DailyMix1_TextInfo3_song2.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix1_TextInfo3_song2.setForeground(Color.GRAY);
+        DailyMix1_TextInfo3_song2.setBounds(1021,490,500,50);
+
+        firstPage.add(DailyMix1_TextInfo_song2);
+        firstPage.add(DailyMix1_TextInfo2_song2);
+        firstPage.add(DailyMix1_TextInfo3_song2);
+
+        //Song three info
+        JLabel DailyMix1_TextInfo_song3 = new JLabel("Headlines");
+        DailyMix1_TextInfo_song3.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix1_TextInfo_song3.setForeground(Color.WHITE);
+        DailyMix1_TextInfo_song3.setBounds(290,582,500,50);
+
+        JLabel DailyMix1_TextInfo2_song3 = new JLabel("Drake");
+        DailyMix1_TextInfo2_song3.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix1_TextInfo2_song3.setForeground(Color.GRAY);
+        DailyMix1_TextInfo2_song3.setBounds(290,605,500,50);
+
+        JLabel DailyMix1_TextInfo3_song3 = new JLabel("3:55");
+        DailyMix1_TextInfo3_song3.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix1_TextInfo3_song3.setForeground(Color.GRAY);
+        DailyMix1_TextInfo3_song3.setBounds(1021,585,500,50);
+
+        firstPage.add(DailyMix1_TextInfo_song3);
+        firstPage.add(DailyMix1_TextInfo2_song3);
+        firstPage.add(DailyMix1_TextInfo3_song3);
+
+        // Song four
+        JLabel DailyMix1_TextInfo_song4 = new JLabel("No Role Modelz");
+        DailyMix1_TextInfo_song4.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix1_TextInfo_song4.setForeground(Color.WHITE);
+        DailyMix1_TextInfo_song4.setBounds(290,682,500,50);
+
+        JLabel DailyMix1_TextInfo2_song4 = new JLabel("J. Cole");
+        DailyMix1_TextInfo2_song4.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix1_TextInfo2_song4.setForeground(Color.GRAY);
+        DailyMix1_TextInfo2_song4.setBounds(290,705,500,50);
+
+        JLabel DailyMix1_TextInfo3_song4 = new JLabel("4:52");
+        DailyMix1_TextInfo3_song4.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix1_TextInfo3_song4.setForeground(Color.GRAY);
+        DailyMix1_TextInfo3_song4.setBounds(1021,685,500,50);
+
+        firstPage.add(DailyMix1_TextInfo_song4);
+        firstPage.add(DailyMix1_TextInfo2_song4);
+        firstPage.add(DailyMix1_TextInfo3_song4);
+
+        // Song Five
+        JLabel DailyMix1_TextInfo_song5 = new JLabel("WAIT FOR U");
+        DailyMix1_TextInfo_song5.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix1_TextInfo_song5.setForeground(Color.WHITE);
+        DailyMix1_TextInfo_song5.setBounds(290,782,500,50);
+
+        JLabel DailyMix1_TextInfo2_song5 = new JLabel("Future, Drake, Tems");
+        DailyMix1_TextInfo2_song5.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix1_TextInfo2_song5.setForeground(Color.GRAY);
+        DailyMix1_TextInfo2_song5.setBounds(290,805,500,50);
+
+        JLabel DailyMix1_TextInfo3_song5 = new JLabel("3:09");
+        DailyMix1_TextInfo3_song5.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix1_TextInfo3_song5.setForeground(Color.GRAY);
+        DailyMix1_TextInfo3_song5.setBounds(1021,785,500,50);
+
+        firstPage.add(DailyMix1_TextInfo_song5);
+        firstPage.add(DailyMix1_TextInfo2_song5);
+        firstPage.add(DailyMix1_TextInfo3_song5);
+
+
         JButton DM1_1 = new JButton();
         DM1_1.setBounds(200, 362, 100, 100);
         DM1_1.setIcon(createImageIcon("superhero.png"));
@@ -271,8 +373,6 @@ public class UI extends JFrame implements ActionListener {
 
 
 
-        // Images;
-
         // Page Two:
         JPanel secondPage = pages.get(1);
 
@@ -305,6 +405,47 @@ public class UI extends JFrame implements ActionListener {
         secondPage.add(DailyMix2_Text2);
         secondPage.add(DailyMix2_Text3);
         secondPage.add(DailyMix2_Text4);
+
+        JButton DM2_1 = new JButton();
+        DM2_1.setBounds(200, 362, 100, 100);
+        DM2_1.setIcon(createImageIcon("onedance.png"));
+        DM2_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_1.setContentAreaFilled(false);
+        DM2_1.addActionListener(this);
+
+        JButton DM2_2 = new JButton();
+        DM2_2.setBounds(200, 462, 100, 100);
+        DM2_2.setIcon(createImageIcon("oneofwun.png"));
+        DM2_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_2.setContentAreaFilled(false);
+        DM2_2.addActionListener(this);
+
+        JButton DM2_3 = new JButton();
+        DM2_3.setBounds(200, 562, 100, 100);
+        DM2_3.setIcon(createImageIcon("myeyes.png"));
+        DM2_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_3.setContentAreaFilled(false);
+        DM2_3.addActionListener(this);
+
+        JButton DM2_4 = new JButton();
+        DM2_4.setBounds(200, 662, 100, 100);
+        DM2_4.setIcon(createImageIcon("solo.png"));
+        DM2_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_4.setContentAreaFilled(false);
+        DM2_4.addActionListener(this);
+
+        JButton DM2_5 = new JButton();
+        DM2_5.setBounds(200, 762, 100, 100);
+        DM2_5.setIcon(createImageIcon("congrats.png"));
+        DM2_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_5.setContentAreaFilled(false);
+        DM2_5.addActionListener(this);
+
+        secondPage.add(DM2_1);
+        secondPage.add(DM2_2);
+        secondPage.add(DM2_3);
+        secondPage.add(DM2_4);
+        secondPage.add(DM2_5);
 
 
         // Third Page:
@@ -340,6 +481,47 @@ public class UI extends JFrame implements ActionListener {
         thirdPage.add(DailyMix3_Text3);
         thirdPage.add(DailyMix3_Text4);
 
+        JButton DM3_1 = new JButton();
+        DM3_1.setBounds(200, 362, 100, 100);
+        DM3_1.setIcon(createImageIcon("excuses.png"));
+        DM3_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_1.setContentAreaFilled(false);
+        DM3_1.addActionListener(this);
+
+        JButton DM3_2 = new JButton();
+        DM3_2.setBounds(200, 462, 100, 100);
+        DM3_2.setIcon(createImageIcon("8asle.png"));
+        DM3_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_2.setContentAreaFilled(false);
+        DM3_2.addActionListener(this);
+
+        JButton DM3_3 = new JButton();
+        DM3_3.setBounds(200, 562, 100, 100);
+        DM3_3.setIcon(createImageIcon("wavy.png"));
+        DM3_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_3.setContentAreaFilled(false);
+        DM3_3.addActionListener(this);
+
+        JButton DM3_4 = new JButton();
+        DM3_4.setBounds(200, 662, 100, 100);
+        DM3_4.setIcon(createImageIcon("naina.png"));
+        DM3_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_4.setContentAreaFilled(false);
+        DM3_4.addActionListener(this);
+
+        JButton DM3_5 = new JButton();
+        DM3_5.setBounds(200, 762, 100, 100);
+        DM3_5.setIcon(createImageIcon("aujila.png"));
+        DM3_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_5.setContentAreaFilled(false);
+        DM3_5.addActionListener(this);
+
+        thirdPage.add(DM3_1);
+        thirdPage.add(DM3_2);
+        thirdPage.add(DM3_3);
+        thirdPage.add(DM3_4);
+        thirdPage.add(DM3_5);
+
 
         // Fourth Page:
         JPanel fourthPage = pages.get(3);
@@ -373,6 +555,48 @@ public class UI extends JFrame implements ActionListener {
         fourthPage.add(DailyMix4_Text2);
         fourthPage.add(DailyMix4_Text3);
         fourthPage.add(DailyMix4_Text4);
+
+        JButton DM4_1 = new JButton();
+        DM4_1.setBounds(200, 362, 100, 100);
+        DM4_1.setIcon(createImageIcon("Die.png"));
+        DM4_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_1.setContentAreaFilled(false);
+        DM4_1.addActionListener(this);
+
+        JButton DM4_2 = new JButton();
+        DM4_2.setBounds(200, 462, 100, 100);
+        DM4_2.setIcon(createImageIcon("Herway.png"));
+        DM4_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_2.setContentAreaFilled(false);
+        DM4_2.addActionListener(this);
+
+        JButton DM4_3 = new JButton();
+        DM4_3.setBounds(200, 562, 100, 100);
+        DM4_3.setIcon(createImageIcon("Dreamin.png"));
+        DM4_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_3.setContentAreaFilled(false);
+        DM4_3.addActionListener(this);
+
+        JButton DM4_4 = new JButton();
+        DM4_4.setBounds(200, 662, 100, 100);
+        DM4_4.setIcon(createImageIcon("Chrisbrown.png"));
+        DM4_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_4.setContentAreaFilled(false);
+        DM4_4.addActionListener(this);
+
+        JButton DM4_5 = new JButton();
+        DM4_5.setBounds(200, 762, 100, 100);
+        DM4_5.setIcon(createImageIcon("Frankocean.png"));
+        DM4_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_5.setContentAreaFilled(false);
+        DM4_5.addActionListener(this);
+
+
+        fourthPage.add(DM4_1);
+        fourthPage.add(DM4_2);
+        fourthPage.add(DM4_3);
+        fourthPage.add(DM4_4);
+        fourthPage.add(DM4_5);
 
 
         // Fifth Page:
@@ -409,6 +633,46 @@ public class UI extends JFrame implements ActionListener {
         fifthPage.add(HottestHits_Text3);
         fifthPage.add(HottestHits_Text4);
 
+        JButton LR_1 = new JButton();
+        LR_1.setBounds(200, 362, 100, 100);
+        LR_1.setIcon(createImageIcon("winningspeech.png"));
+        LR_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_1.setContentAreaFilled(false);
+        LR_1.addActionListener(this);
+
+        JButton LR_2 = new JButton();
+        LR_2.setBounds(200, 462, 100, 100);
+        LR_2.setIcon(createImageIcon("itsup.png"));
+        LR_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_2.setContentAreaFilled(false);
+        LR_2.addActionListener(this);
+
+        JButton LR_3 = new JButton();
+        LR_3.setBounds(200, 562, 100, 100);
+        LR_3.setIcon(createImageIcon("notlikeus.png"));
+        LR_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_3.setContentAreaFilled(false);
+        LR_3.addActionListener(this);
+
+        JButton LR_4 = new JButton();
+        LR_4.setBounds(200, 662, 100, 100);
+        LR_4.setIcon(createImageIcon("lilbaby.png"));
+        LR_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_4.setContentAreaFilled(false);
+        LR_4.addActionListener(this);
+
+        JButton LR_5 = new JButton();
+        LR_5.setBounds(200, 762, 100, 100);
+        LR_5.setIcon(createImageIcon("myeyes.png"));
+        LR_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_5.setContentAreaFilled(false);
+        LR_5.addActionListener(this);
+
+        fifthPage.add(LR_1);
+        fifthPage.add(LR_2);
+        fifthPage.add(LR_3);
+        fifthPage.add(LR_4);
+        fifthPage.add(LR_5);
 
         // Sixth Page:
         JPanel sixthPage = pages.get(5);
@@ -443,6 +707,7 @@ public class UI extends JFrame implements ActionListener {
         sixthPage.add(HottestHits2_Text2);
         sixthPage.add(HottestHits2_Text3);
         sixthPage.add(HottestHits2_Text4);
+
 
 
         // Seventh Page:
@@ -522,6 +787,16 @@ public class UI extends JFrame implements ActionListener {
             iconImages.setContentAreaFilled(false);
             iconImages.addActionListener(this);
 
+            // Clock
+            ClockButton = new JButton();
+            ClockButton.setBounds(1012, 372, 50, 50);
+            ClockButton.setIcon(createImageIcon("clock_icon.png"));
+            ClockButton.setBorder(BorderFactory.createEmptyBorder());
+            ClockButton.setContentAreaFilled(false);
+            ClockButton.addActionListener(this);
+
+            current_page.add(ClockButton);
+
             // HomeButton:
             homeButton = new JButton(createImageIcon("home_icon.png"));
             homeButton.setBounds(800, 220, 30, 30);
@@ -586,7 +861,7 @@ public class UI extends JFrame implements ActionListener {
 
             // Default Page View is Home (-1):
             pageView = -1;
-//            lastCoverArtPageViewed = -1;
+
         }
     }
 
@@ -617,9 +892,6 @@ public class UI extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         Object source = ae.getSource();
-        System.out.println("Current Song Path: " + musicPlayer.getCurrentSongPath());
-        System.out.println(musicPlayer.getSongQueue());
-        System.out.println(musicPlayer.getHistoryQueue());
 
         if (musicPlaying) {
             if (source == skipButton) {
@@ -642,11 +914,6 @@ public class UI extends JFrame implements ActionListener {
          *          or if the individual buttons to each cover art page is being activated.
          */
         if (source == playPauseButton || (pageView != -1 && allPagePlayPauseButtons.get(pageView).contains(source))) {
-            // Clear the queue if this is a different page:
-//            if (lastCoverArtPageViewed != pageView) {
-//                musicPlayer.getSongQueue().clearSongQueue();
-//                System.out.println(0);
-//            }
 
             // If this section is reached, then the above condition guarantees that <source> is a JButton object
             JButton currentButton = (JButton) source;  // <source> is also a JButton, cast it to one
@@ -699,9 +966,6 @@ public class UI extends JFrame implements ActionListener {
 
             musicPlaying = !musicPlaying;
             lastButtonPressed = currentButton;
-//            if (pageView != -1) {
-//                lastCoverArtPageViewed = pageView;
-//            }
         }
     }
 
