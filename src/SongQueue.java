@@ -15,13 +15,20 @@ public class SongQueue {
         }
     }
 
-
     public void addSong(String songName) {
         songs.add(songName);
     }
 
+    public void addSongs(ArrayList<String> songs) {
+        this.songs.addAll(songs);
+    }
+
     public void addSongToFront(String songName) {
         songs.add(0, songName);
+    }
+
+    public void clearSongQueue() {
+        songs.clear();
     }
 
     public String getNextSong() {

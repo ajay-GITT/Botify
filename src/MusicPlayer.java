@@ -2,6 +2,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.io.File;
+import java.util.ArrayList;
 
 public class MusicPlayer {
     private Clip currentSong; // the Clip class basically allows you to start and stop audio
@@ -12,7 +13,9 @@ public class MusicPlayer {
     private SongQueue historyQueue;
     private String currentSongPath;
 
-
+    /**
+     * Constructs a new MusicPlayer that has two SongQueue objects, for a queue and a history.
+     */
     public MusicPlayer() {
         songQueue = new SongQueue();
         historyQueue = new SongQueue();
@@ -43,6 +46,9 @@ public class MusicPlayer {
         }
     }
 
+    /**
+     * Starts playing the audio that is being considered in currentSongPath
+     */
     public void playAudio() {
         try {
             if (currentSong == null || !currentSong.isOpen() || justSkipped) {
