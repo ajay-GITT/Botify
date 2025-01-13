@@ -56,7 +56,6 @@ public class UI extends JFrame implements ActionListener {
         mainPanel.add(logoLabel);
 
 
-
         JPanel bottomBar = new JPanel();
         bottomBar.setBounds(0, 775, 1300, 150);
         bottomBar.setBackground(Color.black);
@@ -85,7 +84,6 @@ public class UI extends JFrame implements ActionListener {
         ));
         prevButton.setContentAreaFilled(false);
         prevButton.addActionListener(this);
-
 
 
         bottomBar.add(prevButton);
@@ -201,23 +199,23 @@ public class UI extends JFrame implements ActionListener {
         JLabel DailyMix1_Text = new JLabel("Daily Mix 1");
         DailyMix1_Text.setFont(new Font("Arial", Font.BOLD, 45));
         DailyMix1_Text.setForeground(Color.WHITE);
-        DailyMix1_Text.setBounds(290,183,300,50);
+        DailyMix1_Text.setBounds(290, 183, 300, 50);
 
 
         JLabel DailyMix1_Text2 = new JLabel("Public Playlist");
         DailyMix1_Text2.setFont(new Font("Arial", Font.BOLD, 17));
         DailyMix1_Text2.setForeground(Color.GRAY);
-        DailyMix1_Text2.setBounds(290,150,300,50);
+        DailyMix1_Text2.setBounds(290, 150, 300, 50);
 
         JLabel DailyMix1_Text3 = new JLabel("Featuring: Future, Metroboomin, Drake, & More!");
         DailyMix1_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix1_Text3.setForeground(Color.GRAY);
-        DailyMix1_Text3.setBounds(292,218,500,50);
+        DailyMix1_Text3.setBounds(292, 218, 500, 50);
 
         JLabel DailyMix1_Text4 = new JLabel("5 songs, 16m 25s");
         DailyMix1_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix1_Text4.setForeground(Color.GRAY);
-        DailyMix1_Text4.setBounds(292,236,300,50);
+        DailyMix1_Text4.setBounds(292, 236, 300, 50);
 
         firstPage.add(DailyMix1_Text);
         firstPage.add(DailyMix1_Text2);
@@ -228,17 +226,17 @@ public class UI extends JFrame implements ActionListener {
         JLabel DailyMix1_TextInfo = new JLabel("Superhero (Heroes & Villains)");
         DailyMix1_TextInfo.setFont(new Font("Arial", Font.BOLD, 20));
         DailyMix1_TextInfo.setForeground(Color.WHITE);
-        DailyMix1_TextInfo.setBounds(290,382,500,50);
+        DailyMix1_TextInfo.setBounds(290, 382, 500, 50);
 
         JLabel DailyMix1_TextInfo2 = new JLabel("Future, Metroboomin");
         DailyMix1_TextInfo2.setFont(new Font("Arial", Font.ITALIC, 15));
         DailyMix1_TextInfo2.setForeground(Color.GRAY);
-        DailyMix1_TextInfo2.setBounds(290,405,500,50);
+        DailyMix1_TextInfo2.setBounds(290, 405, 500, 50);
 
         JLabel DailyMix1_TextInfo3 = new JLabel("3:02");
         DailyMix1_TextInfo3.setFont(new Font("Arial", Font.PLAIN, 16));
         DailyMix1_TextInfo3.setForeground(Color.GRAY);
-        DailyMix1_TextInfo3.setBounds(1021,404,500,50);
+        DailyMix1_TextInfo3.setBounds(1021, 404, 500, 50);
 
         firstPage.add(DailyMix1_TextInfo);
         firstPage.add(DailyMix1_TextInfo2);
@@ -248,17 +246,17 @@ public class UI extends JFrame implements ActionListener {
         JLabel DailyMix1_TextInfo_song2 = new JLabel("LIL DEMON");
         DailyMix1_TextInfo_song2.setFont(new Font("Arial", Font.BOLD, 20));
         DailyMix1_TextInfo_song2.setForeground(Color.WHITE);
-        DailyMix1_TextInfo_song2.setBounds(290,482,500,50);
+        DailyMix1_TextInfo_song2.setBounds(290, 482, 500, 50);
 
         JLabel DailyMix1_TextInfo2_song2 = new JLabel("Future");
         DailyMix1_TextInfo2_song2.setFont(new Font("Arial", Font.ITALIC, 15));
         DailyMix1_TextInfo2_song2.setForeground(Color.GRAY);
-        DailyMix1_TextInfo2_song2.setBounds(290,505,500,50);
+        DailyMix1_TextInfo2_song2.setBounds(290, 505, 500, 50);
 
         JLabel DailyMix1_TextInfo3_song2 = new JLabel("2:19");
         DailyMix1_TextInfo3_song2.setFont(new Font("Arial", Font.PLAIN, 16));
         DailyMix1_TextInfo3_song2.setForeground(Color.GRAY);
-        DailyMix1_TextInfo3_song2.setBounds(1021,490,500,50);
+        DailyMix1_TextInfo3_song2.setBounds(1021, 490, 500, 50);
 
         firstPage.add(DailyMix1_TextInfo_song2);
         firstPage.add(DailyMix1_TextInfo2_song2);
@@ -268,17 +266,17 @@ public class UI extends JFrame implements ActionListener {
         JLabel DailyMix1_TextInfo_song3 = new JLabel("Headlines");
         DailyMix1_TextInfo_song3.setFont(new Font("Arial", Font.BOLD, 20));
         DailyMix1_TextInfo_song3.setForeground(Color.WHITE);
-        DailyMix1_TextInfo_song3.setBounds(290,582,500,50);
+        DailyMix1_TextInfo_song3.setBounds(290, 582, 500, 50);
 
         JLabel DailyMix1_TextInfo2_song3 = new JLabel("Drake");
         DailyMix1_TextInfo2_song3.setFont(new Font("Arial", Font.ITALIC, 15));
         DailyMix1_TextInfo2_song3.setForeground(Color.GRAY);
-        DailyMix1_TextInfo2_song3.setBounds(290,605,500,50);
+        DailyMix1_TextInfo2_song3.setBounds(290, 605, 500, 50);
 
         JLabel DailyMix1_TextInfo3_song3 = new JLabel("3:55");
         DailyMix1_TextInfo3_song3.setFont(new Font("Arial", Font.PLAIN, 16));
         DailyMix1_TextInfo3_song3.setForeground(Color.GRAY);
-        DailyMix1_TextInfo3_song3.setBounds(1021,585,500,50);
+        DailyMix1_TextInfo3_song3.setBounds(1021, 585, 500, 50);
 
         firstPage.add(DailyMix1_TextInfo_song3);
         firstPage.add(DailyMix1_TextInfo2_song3);
@@ -288,17 +286,17 @@ public class UI extends JFrame implements ActionListener {
         JLabel DailyMix1_TextInfo_song4 = new JLabel("No Role Modelz");
         DailyMix1_TextInfo_song4.setFont(new Font("Arial", Font.BOLD, 20));
         DailyMix1_TextInfo_song4.setForeground(Color.WHITE);
-        DailyMix1_TextInfo_song4.setBounds(290,682,500,50);
+        DailyMix1_TextInfo_song4.setBounds(290, 682, 500, 50);
 
         JLabel DailyMix1_TextInfo2_song4 = new JLabel("J. Cole");
         DailyMix1_TextInfo2_song4.setFont(new Font("Arial", Font.ITALIC, 15));
         DailyMix1_TextInfo2_song4.setForeground(Color.GRAY);
-        DailyMix1_TextInfo2_song4.setBounds(290,705,500,50);
+        DailyMix1_TextInfo2_song4.setBounds(290, 705, 500, 50);
 
         JLabel DailyMix1_TextInfo3_song4 = new JLabel("4:52");
         DailyMix1_TextInfo3_song4.setFont(new Font("Arial", Font.PLAIN, 16));
         DailyMix1_TextInfo3_song4.setForeground(Color.GRAY);
-        DailyMix1_TextInfo3_song4.setBounds(1021,685,500,50);
+        DailyMix1_TextInfo3_song4.setBounds(1021, 685, 500, 50);
 
         firstPage.add(DailyMix1_TextInfo_song4);
         firstPage.add(DailyMix1_TextInfo2_song4);
@@ -308,17 +306,17 @@ public class UI extends JFrame implements ActionListener {
         JLabel DailyMix1_TextInfo_song5 = new JLabel("WAIT FOR U");
         DailyMix1_TextInfo_song5.setFont(new Font("Arial", Font.BOLD, 20));
         DailyMix1_TextInfo_song5.setForeground(Color.WHITE);
-        DailyMix1_TextInfo_song5.setBounds(290,782,500,50);
+        DailyMix1_TextInfo_song5.setBounds(290, 782, 500, 50);
 
         JLabel DailyMix1_TextInfo2_song5 = new JLabel("Future, Drake, Tems");
         DailyMix1_TextInfo2_song5.setFont(new Font("Arial", Font.ITALIC, 15));
         DailyMix1_TextInfo2_song5.setForeground(Color.GRAY);
-        DailyMix1_TextInfo2_song5.setBounds(290,805,500,50);
+        DailyMix1_TextInfo2_song5.setBounds(290, 805, 500, 50);
 
         JLabel DailyMix1_TextInfo3_song5 = new JLabel("3:09");
         DailyMix1_TextInfo3_song5.setFont(new Font("Arial", Font.PLAIN, 16));
         DailyMix1_TextInfo3_song5.setForeground(Color.GRAY);
-        DailyMix1_TextInfo3_song5.setBounds(1021,785,500,50);
+        DailyMix1_TextInfo3_song5.setBounds(1021, 785, 500, 50);
 
         firstPage.add(DailyMix1_TextInfo_song5);
         firstPage.add(DailyMix1_TextInfo2_song5);
@@ -372,30 +370,130 @@ public class UI extends JFrame implements ActionListener {
         firstPage.add(DM1_5);
 
 
-
         // Page Two:
         JPanel secondPage = pages.get(1);
 
         JLabel DailyMix2_Text = new JLabel("Daily Mix 2");
         DailyMix2_Text.setFont(new Font("Arial", Font.BOLD, 45));
         DailyMix2_Text.setForeground(Color.WHITE);
-        DailyMix2_Text.setBounds(290,183,300,50);
+        DailyMix2_Text.setBounds(290, 183, 300, 50);
 
         JLabel DailyMix2_Text2 = new JLabel("Public Playlist");
         DailyMix2_Text2.setFont(new Font("Arial", Font.BOLD, 17));
         DailyMix2_Text2.setForeground(Color.GRAY);
-        DailyMix2_Text2.setBounds(290,150,300,50);
+        DailyMix2_Text2.setBounds(290, 150, 300, 50);
 
 
-        JLabel DailyMix2_Text3 = new JLabel("Featuring: Gunna, Travis Scott, Post Malone, & More!");
+        JLabel DailyMix2_Text3 = new JLabel("Featuring: Drake, Travis Scott, Post Malone, & More!");
         DailyMix2_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix2_Text3.setForeground(Color.GRAY);
-        DailyMix2_Text3.setBounds(292,218,500,50);
+        DailyMix2_Text3.setBounds(292, 218, 500, 50);
 
         JLabel DailyMix2_Text4 = new JLabel("5 songs, 16m 35s");
         DailyMix2_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix2_Text4.setForeground(Color.GRAY);
-        DailyMix2_Text4.setBounds(292,236,300,50);
+        DailyMix2_Text4.setBounds(292, 236, 300, 50);
+
+        // Song one Dailymix2
+        JLabel DailyMix2_TextInfo_song = new JLabel("One Dance");
+        DailyMix2_TextInfo_song.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix2_TextInfo_song.setForeground(Color.WHITE);
+        DailyMix2_TextInfo_song.setBounds(290, 382, 500, 50);
+
+        JLabel DailyMix2_TextInfo2_song = new JLabel("Drake, Wizkid");
+        DailyMix2_TextInfo2_song.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix2_TextInfo2_song.setForeground(Color.GRAY);
+        DailyMix2_TextInfo2_song.setBounds(290, 405, 500, 50);
+
+        JLabel DailyMix2_TextInfo3_song = new JLabel("2:53");
+        DailyMix2_TextInfo3_song.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix2_TextInfo3_song.setForeground(Color.GRAY);
+        DailyMix2_TextInfo3_song.setBounds(1021, 404, 500, 50);
+
+        secondPage.add(DailyMix2_TextInfo_song);
+        secondPage.add(DailyMix2_TextInfo2_song);
+        secondPage.add(DailyMix2_TextInfo3_song);
+
+        // Song two Dailymix2
+        JLabel DailyMix2_TextInfo_song2 = new JLabel("one of wun");
+        DailyMix2_TextInfo_song2.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix2_TextInfo_song2.setForeground(Color.WHITE);
+        DailyMix2_TextInfo_song2.setBounds(290, 482, 500, 50);
+
+        JLabel DailyMix2_TextInfo2_song2 = new JLabel("Gunna");
+        DailyMix2_TextInfo2_song2.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix2_TextInfo2_song2.setForeground(Color.GRAY);
+        DailyMix2_TextInfo2_song2.setBounds(290, 505, 500, 50);
+
+        JLabel DailyMix2_TextInfo3_song2 = new JLabel("2:24");
+        DailyMix2_TextInfo3_song2.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix2_TextInfo3_song2.setForeground(Color.GRAY);
+        DailyMix2_TextInfo3_song2.setBounds(1021, 490, 500, 50);
+
+        secondPage.add(DailyMix2_TextInfo_song2);
+        secondPage.add(DailyMix2_TextInfo2_song2);
+        secondPage.add(DailyMix2_TextInfo3_song2);
+
+        // Song three Dailymix2
+        JLabel DailyMix2_TextInfo_song3 = new JLabel("MY EYES");
+        DailyMix2_TextInfo_song3.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix2_TextInfo_song3.setForeground(Color.WHITE);
+        DailyMix2_TextInfo_song3.setBounds(290, 582, 500, 50);
+
+        JLabel DailyMix2_TextInfo2_song3 = new JLabel("Travis Scott");
+        DailyMix2_TextInfo2_song3.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix2_TextInfo2_song3.setForeground(Color.GRAY);
+        DailyMix2_TextInfo2_song3.setBounds(290, 605, 500, 50);
+
+        JLabel DailyMix2_TextInfo3_song3 = new JLabel("4:11");
+        DailyMix2_TextInfo3_song3.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix2_TextInfo3_song3.setForeground(Color.GRAY);
+        DailyMix2_TextInfo3_song3.setBounds(1021, 585, 500, 50);
+
+        secondPage.add(DailyMix2_TextInfo_song3);
+        secondPage.add(DailyMix2_TextInfo2_song3);
+        secondPage.add(DailyMix2_TextInfo3_song3);
+
+        // Song four Dailymix2
+        JLabel DailyMix2_TextInfo_song4 = new JLabel("Solo");
+        DailyMix2_TextInfo_song4.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix2_TextInfo_song4.setForeground(Color.WHITE);
+        DailyMix2_TextInfo_song4.setBounds(290, 682, 500, 50);
+
+        JLabel DailyMix2_TextInfo2_song4 = new JLabel("Future");
+        DailyMix2_TextInfo2_song4.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix2_TextInfo2_song4.setForeground(Color.GRAY);
+        DailyMix2_TextInfo2_song4.setBounds(290, 705, 500, 50);
+
+        JLabel DailyMix2_TextInfo3_song4 = new JLabel("4:25");
+        DailyMix2_TextInfo3_song4.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix2_TextInfo3_song4.setForeground(Color.GRAY);
+        DailyMix2_TextInfo3_song4.setBounds(1021, 685, 500, 50);
+
+        secondPage.add(DailyMix2_TextInfo_song4);
+        secondPage.add(DailyMix2_TextInfo2_song4);
+        secondPage.add(DailyMix2_TextInfo3_song4);
+
+        // Song five Dailymix2
+        JLabel DailyMix2_TextInfo_song5 = new JLabel("Congratulations");
+        DailyMix2_TextInfo_song5.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix2_TextInfo_song5.setForeground(Color.WHITE);
+        DailyMix2_TextInfo_song5.setBounds(290, 782, 500, 50);
+
+        JLabel DailyMix2_TextInfo2_song5 = new JLabel("Post Malone, Quavo");
+        DailyMix2_TextInfo2_song5.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix2_TextInfo2_song5.setForeground(Color.GRAY);
+        DailyMix2_TextInfo2_song5.setBounds(290, 805, 500, 50);
+
+        JLabel DailyMix2_TextInfo3_song5 = new JLabel("3:40");
+        DailyMix2_TextInfo3_song5.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix2_TextInfo3_song5.setForeground(Color.GRAY);
+        DailyMix2_TextInfo3_song5.setBounds(1021, 785, 500, 50);
+
+        secondPage.add(DailyMix2_TextInfo_song5);
+        secondPage.add(DailyMix2_TextInfo2_song5);
+        secondPage.add(DailyMix2_TextInfo3_song5);
+
 
         // Song Directory for Daily mix 2
         SongDirectory dailyMix2 = new SongDirectory("Daily Mix2");
@@ -454,23 +552,123 @@ public class UI extends JFrame implements ActionListener {
         JLabel DailyMix3_Text = new JLabel("Daily Mix 3");
         DailyMix3_Text.setFont(new Font("Arial", Font.BOLD, 45));
         DailyMix3_Text.setForeground(Color.WHITE);
-        DailyMix3_Text.setBounds(290,183,300,50);
+        DailyMix3_Text.setBounds(290, 183, 300, 50);
 
         JLabel DailyMix3_Text2 = new JLabel("Public Playlist");
         DailyMix3_Text2.setFont(new Font("Arial", Font.BOLD, 17));
         DailyMix3_Text2.setForeground(Color.GRAY);
-        DailyMix3_Text2.setBounds(290,150,300,50);
+        DailyMix3_Text2.setBounds(290, 150, 300, 50);
 
 
         JLabel DailyMix3_Text3 = new JLabel("Featuring: Karan Aujila, AP Dhillon, Diljit Dosanjh, & More!");
         DailyMix3_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix3_Text3.setForeground(Color.GRAY);
-        DailyMix3_Text3.setBounds(292,218,500,50);
+        DailyMix3_Text3.setBounds(292, 218, 500, 50);
 
         JLabel DailyMix3_Text4 = new JLabel("5 songs, 12m 6s");
         DailyMix3_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix3_Text4.setForeground(Color.GRAY);
-        DailyMix3_Text4.setBounds(292,236,300,50);
+        DailyMix3_Text4.setBounds(292, 236, 300, 50);
+
+        // Song one Dailymix3
+        JLabel DailyMix3_TextInfo_song = new JLabel("Excuses");
+        DailyMix3_TextInfo_song.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix3_TextInfo_song.setForeground(Color.WHITE);
+        DailyMix3_TextInfo_song.setBounds(290, 382, 500, 50);
+
+        JLabel DailyMix3_TextInfo2_song = new JLabel("AP Dhillon, Gurinder Gill");
+        DailyMix3_TextInfo2_song.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix3_TextInfo2_song.setForeground(Color.GRAY);
+        DailyMix3_TextInfo2_song.setBounds(290, 405, 500, 50);
+
+        JLabel DailyMix3_TextInfo3_song = new JLabel("2:56");
+        DailyMix3_TextInfo3_song.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix3_TextInfo3_song.setForeground(Color.GRAY);
+        DailyMix3_TextInfo3_song.setBounds(1021, 404, 500, 50);
+
+        thirdPage.add(DailyMix3_TextInfo_song);
+        thirdPage.add(DailyMix3_TextInfo2_song);
+        thirdPage.add(DailyMix3_TextInfo3_song);
+
+        // Song two Dailymix3
+        JLabel DailyMix3_TextInfo_song2 = new JLabel("8 ASLE");
+        DailyMix3_TextInfo_song2.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix3_TextInfo_song2.setForeground(Color.WHITE);
+        DailyMix3_TextInfo_song2.setBounds(290, 482, 500, 50);
+
+        JLabel DailyMix3_TextInfo2_song2 = new JLabel("Sukha, Chani Nattan, Prodgk");
+        DailyMix3_TextInfo2_song2.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix3_TextInfo2_song2.setForeground(Color.GRAY);
+        DailyMix3_TextInfo2_song2.setBounds(290, 505, 600, 50);
+
+        JLabel DailyMix3_TextInfo3_song2 = new JLabel("2:41");
+        DailyMix3_TextInfo3_song2.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix3_TextInfo3_song2.setForeground(Color.GRAY);
+        DailyMix3_TextInfo3_song2.setBounds(1021, 490, 500, 50);
+
+        thirdPage.add(DailyMix3_TextInfo_song2);
+        thirdPage.add(DailyMix3_TextInfo2_song2);
+        thirdPage.add(DailyMix3_TextInfo3_song2);
+
+        // Song three Dailymix3
+        JLabel DailyMix3_TextInfo_song3 = new JLabel("Wavy");
+        DailyMix3_TextInfo_song3.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix3_TextInfo_song3.setForeground(Color.WHITE);
+        DailyMix3_TextInfo_song3.setBounds(290, 582, 500, 50);
+
+        JLabel DailyMix3_TextInfo2_song3 = new JLabel("Karan Aujila");
+        DailyMix3_TextInfo2_song3.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix3_TextInfo2_song3.setForeground(Color.GRAY);
+        DailyMix3_TextInfo2_song3.setBounds(290, 605, 600, 50);
+
+        JLabel DailyMix3_TextInfo3_song3 = new JLabel("2:41");
+        DailyMix3_TextInfo3_song3.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix3_TextInfo3_song3.setForeground(Color.GRAY);
+        DailyMix3_TextInfo3_song3.setBounds(1021, 585, 500, 50);
+
+        thirdPage.add(DailyMix3_TextInfo_song3);
+        thirdPage.add(DailyMix3_TextInfo2_song3);
+        thirdPage.add(DailyMix3_TextInfo3_song3);
+
+        // Song four Dailymix3
+        JLabel DailyMix3_TextInfo_song4 = new JLabel("Naina");
+        DailyMix3_TextInfo_song4.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix3_TextInfo_song4.setForeground(Color.WHITE);
+        DailyMix3_TextInfo_song4.setBounds(290, 682, 500, 50);
+
+        JLabel DailyMix3_TextInfo2_song4 = new JLabel("Diljit Dosanjh");
+        DailyMix3_TextInfo2_song4.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix3_TextInfo2_song4.setForeground(Color.GRAY);
+        DailyMix3_TextInfo2_song4.setBounds(290, 705, 600, 50);
+
+        JLabel DailyMix3_TextInfo3_song4 = new JLabel("3:00");
+        DailyMix3_TextInfo3_song4.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix3_TextInfo3_song4.setForeground(Color.GRAY);
+        DailyMix3_TextInfo3_song4.setBounds(1021, 685, 500, 50);
+
+        thirdPage.add(DailyMix3_TextInfo_song4);
+        thirdPage.add(DailyMix3_TextInfo2_song4);
+        thirdPage.add(DailyMix3_TextInfo3_song4);
+
+        // Song five Dailymix3
+        JLabel DailyMix3_TextInfo_song5 = new JLabel("Jee Ni Lagda");
+        DailyMix3_TextInfo_song5.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix3_TextInfo_song5.setForeground(Color.WHITE);
+        DailyMix3_TextInfo_song5.setBounds(290, 782, 500, 50);
+
+        JLabel DailyMix3_TextInfo2_song5 = new JLabel("Karan Aujila, Ikky");
+        DailyMix3_TextInfo2_song5.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix3_TextInfo2_song5.setForeground(Color.GRAY);
+        DailyMix3_TextInfo2_song5.setBounds(290, 805, 600, 50);
+
+        JLabel DailyMix3_TextInfo3_song5 = new JLabel("2:19");
+        DailyMix3_TextInfo3_song5.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix3_TextInfo3_song5.setForeground(Color.GRAY);
+        DailyMix3_TextInfo3_song5.setBounds(1021, 785, 500, 50);
+
+        thirdPage.add(DailyMix3_TextInfo_song5);
+        thirdPage.add(DailyMix3_TextInfo2_song5);
+        thirdPage.add(DailyMix3_TextInfo3_song5);
 
         // Song Directory for Daily mix 3
         SongDirectory dailyMix3 = new SongDirectory("Daily Mix3");
@@ -529,23 +727,124 @@ public class UI extends JFrame implements ActionListener {
         JLabel DailyMix4_Text = new JLabel("Daily Mix 4");
         DailyMix4_Text.setFont(new Font("Arial", Font.BOLD, 45));
         DailyMix4_Text.setForeground(Color.WHITE);
-        DailyMix4_Text.setBounds(290,183,300,50);
+        DailyMix4_Text.setBounds(290, 183, 300, 50);
 
         JLabel DailyMix4_Text2 = new JLabel("Public Playlist");
         DailyMix4_Text2.setFont(new Font("Arial", Font.BOLD, 17));
         DailyMix4_Text2.setForeground(Color.GRAY);
-        DailyMix4_Text2.setBounds(290,150,300,50);
+        DailyMix4_Text2.setBounds(290, 150, 300, 50);
 
 
         JLabel DailyMix4_Text3 = new JLabel("Featuring: PARTYNEXTDOOR, Frank Ocean, Bruno Mars, & More!");
         DailyMix4_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix4_Text3.setForeground(Color.GRAY);
-        DailyMix4_Text3.setBounds(292,218,500,50);
+        DailyMix4_Text3.setBounds(292, 218, 500, 50);
 
         JLabel DailyMix4_Text4 = new JLabel("5 songs, 17m 53s");
         DailyMix4_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix4_Text4.setForeground(Color.GRAY);
-        DailyMix4_Text4.setBounds(292,236,300,50);
+        DailyMix4_Text4.setBounds(292, 236, 300, 50);
+
+        // Song one Dailymix4
+        JLabel DailyMix4_TextInfo = new JLabel("Die With A Smile");
+        DailyMix4_TextInfo.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix4_TextInfo.setForeground(Color.WHITE);
+        DailyMix4_TextInfo.setBounds(290, 382, 500, 50);
+
+        JLabel DailyMix4_TextInfo2 = new JLabel("Lady Gaga, Bruno Mars");
+        DailyMix4_TextInfo2.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix4_TextInfo2.setForeground(Color.GRAY);
+        DailyMix4_TextInfo2.setBounds(290, 405, 500, 50);
+
+        JLabel DailyMix4_TextInfo3 = new JLabel("4:11");
+        DailyMix4_TextInfo3.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix4_TextInfo3.setForeground(Color.GRAY);
+        DailyMix4_TextInfo3.setBounds(1021, 404, 500, 50);
+
+        fourthPage.add(DailyMix4_TextInfo);
+        fourthPage.add(DailyMix4_TextInfo2);
+        fourthPage.add(DailyMix4_TextInfo3);
+
+        // Song two Dailymix4
+        JLabel DailyMix4_TextInfo_song2 = new JLabel("Pink + White");
+        DailyMix4_TextInfo_song2.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix4_TextInfo_song2.setForeground(Color.WHITE);
+        DailyMix4_TextInfo_song2.setBounds(290, 482, 500, 50);
+
+        JLabel DailyMix4_TextInfo2_song2 = new JLabel("Frank Ocean");
+        DailyMix4_TextInfo2_song2.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix4_TextInfo2_song2.setForeground(Color.GRAY);
+        DailyMix4_TextInfo2_song2.setBounds(290, 505, 500, 50);
+
+        JLabel DailyMix4_TextInfo3_song2 = new JLabel("3:04");
+        DailyMix4_TextInfo3_song2.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix4_TextInfo3_song2.setForeground(Color.GRAY);
+        DailyMix4_TextInfo3_song2.setBounds(1021, 490, 500, 50);
+
+        fourthPage.add(DailyMix4_TextInfo_song2);
+        fourthPage.add(DailyMix4_TextInfo2_song2);
+        fourthPage.add(DailyMix4_TextInfo3_song2);
+
+        // Song three Dailymix4
+        JLabel DailyMix4_TextInfo_song3 = new JLabel("Dreamin");
+        DailyMix4_TextInfo_song3.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix4_TextInfo_song3.setForeground(Color.WHITE);
+        DailyMix4_TextInfo_song3.setBounds(290, 582, 500, 50);
+
+        JLabel DailyMix4_TextInfo2_song3 = new JLabel("PARTYNEXTDOOR");
+        DailyMix4_TextInfo2_song3.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix4_TextInfo2_song3.setForeground(Color.GRAY);
+        DailyMix4_TextInfo2_song3.setBounds(290, 605, 500, 50);
+
+        JLabel DailyMix4_TextInfo3_song3 = new JLabel("2:27");
+        DailyMix4_TextInfo3_song3.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix4_TextInfo3_song3.setForeground(Color.GRAY);
+        DailyMix4_TextInfo3_song3.setBounds(1021, 585, 500, 50);
+
+        fourthPage.add(DailyMix4_TextInfo_song3);
+        fourthPage.add(DailyMix4_TextInfo2_song3);
+        fourthPage.add(DailyMix4_TextInfo3_song3);
+
+        // Song four Dailymix4
+        JLabel DailyMix4_TextInfo_song4 = new JLabel("Her Way");
+        DailyMix4_TextInfo_song4.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix4_TextInfo_song4.setForeground(Color.WHITE);
+        DailyMix4_TextInfo_song4.setBounds(290, 682, 500, 50);
+
+        JLabel DailyMix4_TextInfo2_song4 = new JLabel("PARTYNEXTDOOR");
+        DailyMix4_TextInfo2_song4.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix4_TextInfo2_song4.setForeground(Color.GRAY);
+        DailyMix4_TextInfo2_song4.setBounds(290, 705, 500, 50);
+
+        JLabel DailyMix4_TextInfo3_song4 = new JLabel("3:36");
+        DailyMix4_TextInfo3_song4.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix4_TextInfo3_song4.setForeground(Color.GRAY);
+        DailyMix4_TextInfo3_song4.setBounds(1021, 685, 500, 50);
+
+        fourthPage.add(DailyMix4_TextInfo_song4);
+        fourthPage.add(DailyMix4_TextInfo2_song4);
+        fourthPage.add(DailyMix4_TextInfo3_song4);
+
+        // Song five Dailymix4
+        JLabel DailyMix4_TextInfo_song5 = new JLabel("Angel Numbers/Ten Toes");
+        DailyMix4_TextInfo_song5.setFont(new Font("Arial", Font.BOLD, 20));
+        DailyMix4_TextInfo_song5.setForeground(Color.WHITE);
+        DailyMix4_TextInfo_song5.setBounds(290, 782, 600, 50);
+
+        JLabel DailyMix4_TextInfo2_song5 = new JLabel("Chris Brown");
+        DailyMix4_TextInfo2_song5.setFont(new Font("Arial", Font.ITALIC, 15));
+        DailyMix4_TextInfo2_song5.setForeground(Color.GRAY);
+        DailyMix4_TextInfo2_song5.setBounds(290, 805, 500, 50);
+
+        JLabel DailyMix4_TextInfo3_song5 = new JLabel("5:06");
+        DailyMix4_TextInfo3_song5.setFont(new Font("Arial", Font.PLAIN, 16));
+        DailyMix4_TextInfo3_song5.setForeground(Color.GRAY);
+        DailyMix4_TextInfo3_song5.setBounds(1021, 785, 500, 50);
+
+        fourthPage.add(DailyMix4_TextInfo_song5);
+        fourthPage.add(DailyMix4_TextInfo2_song5);
+        fourthPage.add(DailyMix4_TextInfo3_song5);
+
 
         // Song Directory for Daily mix 4
         SongDirectory dailyMix4 = new SongDirectory("Daily Mix4");
@@ -565,7 +864,7 @@ public class UI extends JFrame implements ActionListener {
 
         JButton DM4_2 = new JButton();
         DM4_2.setBounds(200, 462, 100, 100);
-        DM4_2.setIcon(createImageIcon("Herway.png"));
+        DM4_2.setIcon(createImageIcon("Frankocean.png"));
         DM4_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
         DM4_2.setContentAreaFilled(false);
         DM4_2.addActionListener(this);
@@ -579,14 +878,14 @@ public class UI extends JFrame implements ActionListener {
 
         JButton DM4_4 = new JButton();
         DM4_4.setBounds(200, 662, 100, 100);
-        DM4_4.setIcon(createImageIcon("Chrisbrown.png"));
+        DM4_4.setIcon(createImageIcon("Herway.png"));
         DM4_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
         DM4_4.setContentAreaFilled(false);
         DM4_4.addActionListener(this);
 
         JButton DM4_5 = new JButton();
         DM4_5.setBounds(200, 762, 100, 100);
-        DM4_5.setIcon(createImageIcon("Frankocean.png"));
+        DM4_5.setIcon(createImageIcon("Chrisbrown.png"));
         DM4_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
         DM4_5.setContentAreaFilled(false);
         DM4_5.addActionListener(this);
@@ -605,23 +904,23 @@ public class UI extends JFrame implements ActionListener {
         JLabel HottestHits_Text = new JLabel("Latest Releases");
         HottestHits_Text.setFont(new Font("Arial", Font.BOLD, 45));
         HottestHits_Text.setForeground(Color.WHITE);
-        HottestHits_Text.setBounds(290,183,500,50);
+        HottestHits_Text.setBounds(290, 183, 500, 50);
 
         JLabel HottestHits_Text2 = new JLabel("Public Playlist");
         HottestHits_Text2.setFont(new Font("Arial", Font.BOLD, 17));
         HottestHits_Text2.setForeground(Color.GRAY);
-        HottestHits_Text2.setBounds(290,150,300,50);
+        HottestHits_Text2.setBounds(290, 150, 300, 50);
 
 
         JLabel HottestHits_Text3 = new JLabel("Featuring: Travis Scott, Lil Baby, Playboi Carti, & More!");
         HottestHits_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits_Text3.setForeground(Color.GRAY);
-        HottestHits_Text3.setBounds(292,218,500,50);
+        HottestHits_Text3.setBounds(292, 218, 500, 50);
 
         JLabel HottestHits_Text4 = new JLabel("5 songs, 17m 53s");
         HottestHits_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits_Text4.setForeground(Color.GRAY);
-        HottestHits_Text4.setBounds(292,236,300,50);
+        HottestHits_Text4.setBounds(292, 236, 300, 50);
 
 
         // Song Directory for Latest Releases
@@ -680,27 +979,69 @@ public class UI extends JFrame implements ActionListener {
         JLabel HottestHits2_Text = new JLabel("Beast Mode");
         HottestHits2_Text.setFont(new Font("Arial", Font.BOLD, 45));
         HottestHits2_Text.setForeground(Color.WHITE);
-        HottestHits2_Text.setBounds(290,183,300,50);
+        HottestHits2_Text.setBounds(290, 183, 300, 50);
 
         JLabel HottestHits2_Text2 = new JLabel("Public Playlist");
         HottestHits2_Text2.setFont(new Font("Arial", Font.BOLD, 17));
         HottestHits2_Text2.setForeground(Color.GRAY);
-        HottestHits2_Text2.setBounds(290,150,300,50);
+        HottestHits2_Text2.setBounds(290, 150, 300, 50);
 
 
         JLabel HottestHits2_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
         HottestHits2_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits2_Text3.setForeground(Color.GRAY);
-        HottestHits2_Text3.setBounds(292,218,500,50);
+        HottestHits2_Text3.setBounds(292, 218, 500, 50);
 
         JLabel HottestHits2_Text4 = new JLabel("5 songs, 17m 53s");
         HottestHits2_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits2_Text4.setForeground(Color.GRAY);
-        HottestHits2_Text4.setBounds(292,236,300,50);
+        HottestHits2_Text4.setBounds(292, 236, 300, 50);
 
         // Song Directory for Beast Mode
         SongDirectory beastMode = new SongDirectory("Beast Mode");
         songDirectories.add(beastMode);
+
+        JButton BM_1 = new JButton();
+        BM_1.setBounds(200, 362, 100, 100);
+        BM_1.setIcon(createImageIcon("glock.png"));
+        BM_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_1.setContentAreaFilled(false);
+        BM_1.addActionListener(this);
+
+        JButton BM_2 = new JButton();
+        BM_2.setBounds(200, 462, 100, 100);
+        BM_2.setIcon(createImageIcon("purecoke.png"));
+        BM_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_2.setContentAreaFilled(false);
+        BM_2.addActionListener(this);
+
+        JButton BM_3 = new JButton();
+        BM_3.setBounds(200, 562, 100, 100);
+        BM_3.setIcon(createImageIcon("astroworld.png"));
+        BM_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_3.setContentAreaFilled(false);
+        BM_3.addActionListener(this);
+
+        JButton BM_4 = new JButton();
+        BM_4.setBounds(200, 662, 100, 100);
+        BM_4.setIcon(createImageIcon("Toreup.png"));
+        BM_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_4.setContentAreaFilled(false);
+        BM_4.addActionListener(this);
+
+        JButton BM_5 = new JButton();
+        BM_5.setBounds(200, 762, 100, 100);
+        BM_5.setIcon(createImageIcon("nonstop.png"));
+        BM_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_5.setContentAreaFilled(false);
+        BM_5.addActionListener(this);
+
+
+        sixthPage.add(BM_1);
+        sixthPage.add(BM_2);
+        sixthPage.add(BM_3);
+        sixthPage.add(BM_4);
+        sixthPage.add(BM_5);
 
 
         sixthPage.add(HottestHits2_Text);
@@ -709,34 +1050,74 @@ public class UI extends JFrame implements ActionListener {
         sixthPage.add(HottestHits2_Text4);
 
 
-
         // Seventh Page:
         JPanel seventhPage = pages.get(6);
 
         JLabel HottestHits3_Text = new JLabel("Hot Hits R&B");
         HottestHits3_Text.setFont(new Font("Arial", Font.BOLD, 45));
         HottestHits3_Text.setForeground(Color.WHITE);
-        HottestHits3_Text.setBounds(290,183,500,50);
+        HottestHits3_Text.setBounds(290, 183, 500, 50);
 
         JLabel HottestHits3_Text2 = new JLabel("Public Playlist");
         HottestHits3_Text2.setFont(new Font("Arial", Font.BOLD, 17));
         HottestHits3_Text2.setForeground(Color.GRAY);
-        HottestHits3_Text2.setBounds(290,150,300,50);
+        HottestHits3_Text2.setBounds(290, 150, 300, 50);
 
 
         JLabel HottestHits3_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
         HottestHits3_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits3_Text3.setForeground(Color.GRAY);
-        HottestHits3_Text3.setBounds(292,218,500,50);
+        HottestHits3_Text3.setBounds(292, 218, 500, 50);
 
         JLabel HottestHits3_Text4 = new JLabel("5 songs, 17m 53s");
         HottestHits3_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits3_Text4.setForeground(Color.GRAY);
-        HottestHits3_Text4.setBounds(292,236,300,50);
+        HottestHits3_Text4.setBounds(292, 236, 300, 50);
 
         // Song Directory for hot hits
         SongDirectory hotHits = new SongDirectory("Hot Hits");
         songDirectories.add(hotHits);
+
+        JButton HH_1 = new JButton();
+        HH_1.setBounds(200, 362, 100, 100);
+        HH_1.setIcon(createImageIcon("Morning.png"));
+        HH_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_1.setContentAreaFilled(false);
+        HH_1.addActionListener(this);
+
+        JButton HH_2 = new JButton();
+        HH_2.setBounds(200, 462, 100, 100);
+        HH_2.setIcon(createImageIcon("kehlani.png"));
+        HH_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_2.setContentAreaFilled(false);
+        HH_2.addActionListener(this);
+
+        JButton HH_3 = new JButton();
+        HH_3.setBounds(200, 562, 100, 100);
+        HH_3.setIcon(createImageIcon("madeforme.png"));
+        HH_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_3.setContentAreaFilled(false);
+        HH_3.addActionListener(this);
+
+        JButton HH_4 = new JButton();
+        HH_4.setBounds(200, 662, 100, 100);
+        HH_4.setIcon(createImageIcon("timeless.png"));
+        HH_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_4.setContentAreaFilled(false);
+        HH_4.addActionListener(this);
+
+        JButton HH_5 = new JButton();
+        HH_5.setBounds(200, 762, 100, 100);
+        HH_5.setIcon(createImageIcon("saturn.png"));
+        HH_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_5.setContentAreaFilled(false);
+        HH_5.addActionListener(this);
+
+        seventhPage.add(HH_1);
+        seventhPage.add(HH_2);
+        seventhPage.add(HH_3);
+        seventhPage.add(HH_4);
+        seventhPage.add(HH_5);
 
         seventhPage.add(HottestHits3_Text);
         seventhPage.add(HottestHits3_Text2);
@@ -749,27 +1130,68 @@ public class UI extends JFrame implements ActionListener {
         JLabel HottestHits4_Text = new JLabel("South Asian Gems");
         HottestHits4_Text.setFont(new Font("Arial", Font.BOLD, 45));
         HottestHits4_Text.setForeground(Color.WHITE);
-        HottestHits4_Text.setBounds(290,183,500,50);
+        HottestHits4_Text.setBounds(290, 183, 500, 50);
 
         JLabel HottestHits4_Text2 = new JLabel("Public Playlist");
         HottestHits4_Text2.setFont(new Font("Arial", Font.BOLD, 17));
         HottestHits4_Text2.setForeground(Color.GRAY);
-        HottestHits4_Text2.setBounds(290,150,300,50);
+        HottestHits4_Text2.setBounds(290, 150, 300, 50);
 
 
         JLabel HottestHits4_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
         HottestHits4_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits4_Text3.setForeground(Color.GRAY);
-        HottestHits4_Text3.setBounds(292,218,500,50);
+        HottestHits4_Text3.setBounds(292, 218, 500, 50);
 
         JLabel HottestHits4_Text4 = new JLabel("5 songs, 17m 53s");
         HottestHits4_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits4_Text4.setForeground(Color.GRAY);
-        HottestHits4_Text4.setBounds(292,236,300,50);
+        HottestHits4_Text4.setBounds(292, 236, 300, 50);
 
         // Song Directory for hot hits
         SongDirectory southAsianGems = new SongDirectory("South Asian Gems");
         songDirectories.add(southAsianGems);
+
+        JButton SAG_1 = new JButton();
+        SAG_1.setBounds(200, 362, 100, 100);
+        SAG_1.setIcon(createImageIcon("tujh.png"));
+        SAG_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_1.setContentAreaFilled(false);
+        SAG_1.addActionListener(this);
+
+        JButton SAG_2 = new JButton();
+        SAG_2.setBounds(200, 462, 100, 100);
+        SAG_2.setIcon(createImageIcon("hayyoda.png"));
+        SAG_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_2.setContentAreaFilled(false);
+        SAG_2.addActionListener(this);
+
+        JButton SAG_3 = new JButton();
+        SAG_3.setBounds(200, 562, 100, 100);
+        SAG_3.setIcon(createImageIcon("jimmiki.png"));
+        SAG_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_3.setContentAreaFilled(false);
+        SAG_3.addActionListener(this);
+
+        JButton SAG_4 = new JButton();
+        SAG_4.setBounds(200, 662, 100, 100);
+        SAG_4.setIcon(createImageIcon("chut.png"));
+        SAG_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_4.setContentAreaFilled(false);
+        SAG_4.addActionListener(this);
+
+        JButton SAG_5 = new JButton();
+        SAG_5.setBounds(200, 762, 100, 100);
+        SAG_5.setIcon(createImageIcon("fazat.png"));
+        SAG_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_5.setContentAreaFilled(false);
+        SAG_5.addActionListener(this);
+
+        eigthPage.add(SAG_1);
+        eigthPage.add(SAG_2);
+        eigthPage.add(SAG_3);
+        eigthPage.add(SAG_4);
+        eigthPage.add(SAG_5);
 
         eigthPage.add(HottestHits4_Text);
         eigthPage.add(HottestHits4_Text2);
@@ -798,8 +1220,8 @@ public class UI extends JFrame implements ActionListener {
             current_page.add(ClockButton);
 
             // HomeButton:
-            homeButton = new JButton(createImageIcon("home_icon.png"));
-            homeButton.setBounds(800, 220, 30, 30);
+            homeButton = new JButton(createImageIcon("botify_logo.png"));
+            homeButton.setBounds(10, 10, 100, 80);
             homeButton.setBorderPainted(false);
             homeButton.setContentAreaFilled(false);
             homeButton.addActionListener(new ActionListener() {
@@ -846,13 +1268,7 @@ public class UI extends JFrame implements ActionListener {
             CoverArtMainPanel.setBounds(10, 340, 1200, 545);
 
 
-
-            // Logo
-            JLabel logoLabel_2 = new JLabel(createImageIcon("botify_logo.png"));
-            logoLabel_2.setBounds(10, 10, 100, 80);
-
             // Adding
-            current_page.add(logoLabel_2);
             current_page.add(iconImages);
             current_page.add(homeButton);
             current_page.add(PlaylistPanel);
