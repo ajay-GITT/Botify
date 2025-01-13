@@ -613,18 +613,19 @@ public class UI extends JFrame implements ActionListener {
          *          or if the individual buttons to each cover art page is being activated.
          */
         if (source == playPauseButton || (pageView != -1 && pagePlayPauseButtons.get(pageView).contains(source))) {
-            JButton coverArtPageButton = (JButton) source;  // <source> is also a JButton, cast it to one
+            // If this section is reached, then the above condition guarantees that <source> is a JButton object
+            JButton specificButton = (JButton) source;  // <source> is also a JButton, cast it to one
             if (musicPlaying) {
                 musicPlayer.pauseAudio();
                 playPauseButton.setIcon(createImageIcon("play_icon.png"));
-                if (pageView != -1) {
-                    coverArtPageButton.setIcon(createImageIcon("play_1.png"));
+                if (pageView != -1) {  // pageView != -1 means not on home page (aka on cover art page)
+                    specificButton.setIcon(createImageIcon("play_1.png"));
                 }
             } else {
                 musicPlayer.playAudio();
                 playPauseButton.setIcon(createImageIcon("pause_icon.png"));
                 if (pageView != -1) {
-                    coverArtPageButton.setIcon(createImageIcon("pause_1.png"));
+                    specificButton.setIcon(createImageIcon("pause_1.png"));
                 }
             }
             musicPlaying = !musicPlaying;
