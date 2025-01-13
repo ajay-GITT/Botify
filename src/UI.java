@@ -9,6 +9,12 @@ public class UI extends JFrame implements ActionListener {
     public JButton skipButton, prevButton;
     public JButton homeButton;
 
+    // Containers for buttons of specific songs for each page:
+    private ArrayList<ArrayList<JButton>> pagePlayPauseButtons = new ArrayList<ArrayList<JButton>>();
+
+    // Page Indicator:
+    private int pageView;
+
     public boolean musicPlaying = false;
     public MusicPlayer musicPlayer;
     private JPanel mainPanel;
@@ -257,6 +263,7 @@ public class UI extends JFrame implements ActionListener {
 
         int playPause1_y = 362; // Initial y position
 
+        ArrayList<JButton> pageOnePlayButtons = new ArrayList<JButton>();
         for (int i = 0; i < 5; i++) {
             JButton playPausePg1 = new JButton();
             playPausePg1.setBounds(100, playPause1_y, 100, 100); // Set bounds with playPause1_y
@@ -265,9 +272,11 @@ public class UI extends JFrame implements ActionListener {
             playPausePg1.setContentAreaFilled(false);
             playPausePg1.addActionListener(this);
             firstPage.add(playPausePg1);
+            pageOnePlayButtons.add(playPausePg1);
 
             playPause1_y += 100; // Increment playPause1_y for the next button
         }
+        pagePlayPauseButtons.add(pageOnePlayButtons);
 
 
         // Images;
@@ -545,7 +554,8 @@ public class UI extends JFrame implements ActionListener {
             current_page.add(CoverArtMainPanel);
             current_page.add(CoverArtTopPanel);
 
-
+            // Default Page View is Home (-1):
+            pageView = -1;
         }
 
     }
@@ -555,12 +565,14 @@ public class UI extends JFrame implements ActionListener {
         mainPanel.setVisible(false);
         blackPage.setVisible(false);
         page.setVisible(true);
+        pageView = pages.indexOf(page);  // From pages 1-8 (0-7, inclusive)
     }
 
     private void goToMainPage(JPanel page) {
         blackPage.setVisible(false);
         mainPanel.setVisible(true);
         page.setVisible(false);
+        pageView = -1;
     }
 
     protected static ImageIcon createImageIcon(String path) {
@@ -588,13 +600,32 @@ public class UI extends JFrame implements ActionListener {
             }
         }
 
-        if (source == playPauseButton) {
+        // Home Page (pageView == -1)
+        /*
+         * - pageView != -1 means not on home page
+         * - pagePlayPauseButtons is a 2D ArrayList containing ArrayLists of JButton objects
+         * - The inner arraylist represents the collection of JButton objects for individual pages
+         * - The if-condition intends to check if the source (i.e. the button being clicked) is indeed
+         *   part of the particular page's buttons (this means the user isn't going to click on some button
+         *   (in the home page and suddenly the button on the cover art page is activated, or something strange).
+         *
+         * Overall: Checks if the playPauseButton is activated (the same one as on the home page)
+         *          or if the individual buttons to each cover art page is being activated.
+         */
+        if (source == playPauseButton || (pageView != -1 && pagePlayPauseButtons.get(pageView).contains(source))) {
+            JButton coverArtPageButton = (JButton) source;  // <source> is also a JButton, cast it to one
             if (musicPlaying) {
                 musicPlayer.pauseAudio();
                 playPauseButton.setIcon(createImageIcon("play_icon.png"));
+                if (pageView != -1) {
+                    coverArtPageButton.setIcon(createImageIcon("play_1.png"));
+                }
             } else {
                 musicPlayer.playAudio();
                 playPauseButton.setIcon(createImageIcon("pause_icon.png"));
+                if (pageView != -1) {
+                    coverArtPageButton.setIcon(createImageIcon("pause_1.png"));
+                }
             }
             musicPlaying = !musicPlaying;
         }
