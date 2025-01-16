@@ -1277,7 +1277,6 @@ public class UI extends JFrame implements ActionListener {
 
             // Default Page View is Home (-1):
             pageView = -1;
-
         }
     }
 
@@ -1296,6 +1295,22 @@ public class UI extends JFrame implements ActionListener {
         pageView = -1;
     }
 
+    /**
+     * Helper method to determine with which directory (page) the current song
+     * being played is associated.
+     *
+     * @param songPath
+     * @return the index of the relevant directory
+     */
+    private int computeDirectoryIndexOfCurrentSong(String songPath) {
+        for (int i = 0; i < songDirectories.size(); i++) {
+            if (songDirectories.get(i).getSongs().contains(songPath)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     protected static ImageIcon createImageIcon(String path) {
         java.net.URL imgURL = UI.class.getResource(path);
         if (imgURL != null) {
@@ -1310,10 +1325,50 @@ public class UI extends JFrame implements ActionListener {
         Object source = ae.getSource();
 
         if (musicPlaying) {
+            // Match the song currently playing with its associated directory:
+            int currentSongDirectoryPlayedFrom = computeDirectoryIndexOfCurrentSong(musicPlayer.getCurrentSongPath());
+
+            // Match the song currently playing with its exact position in its corresponding song directory:
+            int indexOfSong = songDirectories.get(currentSongDirectoryPlayedFrom).getSongs().indexOf(musicPlayer.getCurrentSongPath());
+            // Take reference of the button corresponding to that song:
+            JButton buttonToSet = allPagePlayPauseButtons.get(currentSongDirectoryPlayedFrom).get(indexOfSong);
+
             if (source == skipButton) {
-                musicPlayer.skipSong();
+                // Skip to next song:
+                // If it is NOT the case that
+                // the music player's song queue is empty,
+                // then there must be songs remaining in the queue.
+                if (!musicPlayer.getSongQueue().isEmpty()) {
+                    // Set current song button icon to play
+                    buttonToSet.setIcon(createImageIcon("play_1.png"));
+
+                    // Skip to the next song
+                    musicPlayer.skipSong();
+
+                    // Set next song ("current of next") button icon to pause
+                    indexOfSong++;  // the next button is in a position greater by only 1 index
+                    // If there is still a song to skip to, then no IndexError should occur
+                    buttonToSet = allPagePlayPauseButtons.get(currentSongDirectoryPlayedFrom).get(indexOfSong);
+                    buttonToSet.setIcon(createImageIcon("pause_1.png"));
+                }
             } else if (source == prevButton) {
-                musicPlayer.prevSong();
+                // Go to the previous song:
+                // If it is NOT the case that the user has songs to go previous to,
+                // then there must be songs remaining in the history queue.
+                if (!(musicPlayer.getHistoryQueue().isEmpty() && !("".equals(musicPlayer.getCurrentSongPath())))) {
+
+
+                    buttonToSet.setIcon(createImageIcon("play_1.png"));
+
+                    // Play the previous song
+                    musicPlayer.prevSong();
+
+                    // Set the previous song ("current of prev.") button icon to pause
+                    indexOfSong--;  // the previous button is in a position less by only 1 index
+                    // If there is still a song to go back to, then no IndexError should occur
+                    buttonToSet = allPagePlayPauseButtons.get(currentSongDirectoryPlayedFrom).get(indexOfSong);
+                    buttonToSet.setIcon(createImageIcon("pause_1.png"));
+                }
             }
         }
 

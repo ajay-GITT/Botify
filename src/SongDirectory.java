@@ -3,6 +3,8 @@ import java.io.File;
 
 public class SongDirectory {
     private ArrayList<String> songs;
+    private ArrayList<ArrayList<String>> songsOnEachPage;
+    private final int SONGS_PER_PAGE = 5, NUM_OF_FOLDERS = 8;
 
     public SongDirectory(String folderName) {
         songs = new ArrayList<String>();
