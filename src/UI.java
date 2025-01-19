@@ -77,7 +77,6 @@ public class UI extends JFrame implements ActionListener {
         // Song Thumbnail
         currentSongThumbnail = new JButton();
         currentSongThumbnail.setBounds(0, 775, 100, 100);
-        // TODO: change the initial song to the song of 1.wav
         lastSongPath = "src/Songs/ALL SONGS/Sample Songs/1.wav";
 
         currentSongThumbnail.setIcon(createImageIcon("zoots.png"));
@@ -197,7 +196,7 @@ public class UI extends JFrame implements ActionListener {
         mainPanelRounded.setBounds(120, 95, 1100, 690);
         mainPanel.add(mainPanelRounded);
 
-        RoundedSquarePanel sidePanelRounded = new RoundedSquarePanel(new Color(45, 47, 51), 300);
+        RoundedSquarePanel sidePanelRounded = new RoundedSquarePanel(new Color(25, 27, 30), 300);
         sidePanelRounded.setBounds(-5, 100, 150, 690);
         mainPanel.add(sidePanelRounded);
 
