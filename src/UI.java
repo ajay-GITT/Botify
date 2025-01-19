@@ -200,6 +200,11 @@ public class UI extends JFrame implements ActionListener {
         sidePanelRounded.setBounds(-5, 100, 150, 690);
         mainPanel.add(sidePanelRounded);
 
+        RoundedSquarePanel topPanelRounded = new RoundedSquarePanel(new Color(25, 27, 30), 300);
+        topPanelRounded.setBounds(120, -20, 1110, 150);
+        mainPanel.add(topPanelRounded);
+
+
 
         // Page One: (Custom stuff that is specific to page one)
         JPanel firstPage = pages.get(0);
@@ -568,7 +573,7 @@ public class UI extends JFrame implements ActionListener {
         DailyMix3_Text2.setBounds(290, 150, 300, 50);
 
 
-        JLabel DailyMix3_Text3 = new JLabel("Featuring: Karan Aujila, AP Dhillon, Diljit Dosanjh, & More!");
+        JLabel DailyMix3_Text3 = new JLabel("Featuring: Karan Aujla, AP Dhillon, Diljit Dosanjh, & More!");
         DailyMix3_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         DailyMix3_Text3.setForeground(Color.GRAY);
         DailyMix3_Text3.setBounds(292, 218, 500, 50);
@@ -1903,7 +1908,7 @@ public class UI extends JFrame implements ActionListener {
 
         // Song one
         addSongDetails(pageIndex,
-                "M a k e I t T o T h e M o r n i n g",
+                "MAKE IT TO THE MORNING",
                 "PARTYNEXTDOOR",
                 "Morning.png");
 
@@ -1937,7 +1942,7 @@ public class UI extends JFrame implements ActionListener {
         // Song one
         addSongDetails(pageIndex,
                 "Tujh Mein Rab Dikhta Hain",
-                "Roop Kumar Rathod, Salim-Sulaiman, Jaideep Sahni",
+                "Roop Kumar Rathod, Salim-Sulaiman",
                 "tujh.png");
 
         // Song two
@@ -1949,19 +1954,19 @@ public class UI extends JFrame implements ActionListener {
         // Song three
         addSongDetails(pageIndex,
                 "Entammede Jimikki Kammal",
-                "Shaan Rahman, Vineeth Sreenivasan, Renjith Unni",
+                "Shaan Rahman, Vineeth Sreenivasan",
                 "jimmiki.png");
 
         // Song four
         addSongDetails(pageIndex,
                 "Chuttamalle",
-                "Anirudh Ravichander, Shilpa Rao, Ramajogayya Sastry",
+                "Anirudh Ravichander, Shilpa Rao",
                 "chut.png");
 
         // Song five
         addSongDetails(pageIndex,
                 "Illuminati",
-                "Sushin Shyam, Dabzee, Vinayak Sasikumar",
+                "Sushin Shyam, Vinayak Sasikumar",
                 "fazat.png");
         pageIndex++;
 
