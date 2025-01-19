@@ -160,6 +160,7 @@ public class UI extends JFrame implements ActionListener {
 
 
         String[] dailyMixFiles = {"dailymix1.png", "dailymix2.png", "dailymix3.png", "dailymix4.png"};
+        String[] hottestHitsFiles = {"hottesthits1.png", "hottesthits2.png", "hottesthits3.png", "hottesthits4.png"};
         int mixesX = 192;
         int yPositionDailyMix = 220;
         int yPositionHottestHits = 520;
@@ -167,58 +168,10 @@ public class UI extends JFrame implements ActionListener {
         int MixesHeight = 194;
         int MixingSpacing = 255;
 
-        for (int i = 0; i < dailyMixFiles.length; i++) {
-            icon_paths.add(dailyMixFiles[i]);
-
-            JButton dailyMixButton = new JButton("");
-            dailyMixButton.setBounds(mixesX + (i * MixingSpacing), yPositionDailyMix, MixesWidth, MixesHeight);
-            dailyMixButton.setIcon(createImageIcon(dailyMixFiles[i]));
-            dailyMixButton.setBorderPainted(false);
-            dailyMixButton.setFocusPainted(false);
-            dailyMixButton.setOpaque(false);
-
-            JPanel page = new JPanel(null);
-            page.setBounds(0, 0, getWidth(), getHeight());
-            page.setBackground(Color.BLACK);
-            page.setVisible(false);
-            add(page);
-            pages.add(page);
-
-            dailyMixButton.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-//                    showBlackPage();
-                    showPage(page);
-                }
-            });
-            mainPanel.add(dailyMixButton);
-        }
-
-        String[] hottestHitsFiles = {"hottesthits1.png", "hottesthits2.png", "hottesthits3.png", "hottesthits4.png"};
-
-        for (int i = 0; i < hottestHitsFiles.length; i++) {
-            icon_paths.add(hottestHitsFiles[i]);
-
-            JButton hottestHitsButton = new JButton();
-            hottestHitsButton.setBounds(mixesX + (i * MixingSpacing), yPositionHottestHits, MixesWidth, MixesHeight);
-            hottestHitsButton.setIcon(createImageIcon(hottestHitsFiles[i]));
-            hottestHitsButton.setBorderPainted(false);
-            hottestHitsButton.setFocusPainted(false);
-            hottestHitsButton.setOpaque(false);
-
-            JPanel page = new JPanel(null);
-            page.setBounds(0, 0, getWidth(), getHeight());
-            page.setBackground(Color.BLACK);
-            page.setVisible(false);
-            add(page);
-            pages.add(page);
-
-            hottestHitsButton.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    showPage(page);
-                }
-            });
-            mainPanel.add(hottestHitsButton);
-        }
+        // Recursive creation for Daily Mix files
+        createButtonsRecursively(dailyMixFiles, mixesX, yPositionDailyMix, MixesWidth, MixesHeight, MixingSpacing, 0);
+        // Recursive creation for Hottest Hits files
+        createButtonsRecursively(hottestHitsFiles, mixesX, yPositionHottestHits, MixesWidth, MixesHeight, MixingSpacing, 0);
 
         // Background Panels for Cover Art
         int dailyMixX = 149;
@@ -2017,8 +1970,8 @@ public class UI extends JFrame implements ActionListener {
         songTrackNames.add(new ArrayList<String>());
         songArtistNames.add(new ArrayList<String>());
         songThumbnailPaths.add(new ArrayList<String>());
-        // todo: change details to true details
 
+        // todo: change details to true details
         // Song one
         addSongDetails(pageIndex,
                 "PUFFIN ON ZOOTIEZ",
@@ -2072,6 +2025,9 @@ public class UI extends JFrame implements ActionListener {
      * @return The index of the song relative to a particular directory that has been looked up.
      */
     private int getIndexOfSong(int directoryPosition) {
+        if (directoryPosition == -1) {
+            return -1;
+        }
         return songDirectories.get(directoryPosition).getSongs().indexOf(musicPlayer.getCurrentSongPath());
     }
 
@@ -2082,7 +2038,11 @@ public class UI extends JFrame implements ActionListener {
      */
     private int getIndexOfSong() {
         String currentSongPath = musicPlayer.getCurrentSongPath();
-        return songDirectories.get(computeDirectoryIndexOfPath(currentSongPath)).getSongs().indexOf(currentSongPath);
+        int directoryIndex = computeDirectoryIndexOfPath(currentSongPath, 0);
+        if (directoryIndex == -1) {
+            return -1;
+        }
+        return songDirectories.get(directoryIndex).getSongs().indexOf(currentSongPath);
     }
 
     /**
@@ -2092,7 +2052,7 @@ public class UI extends JFrame implements ActionListener {
     private void updateSongInfo() {
         String currentSongPath = musicPlayer.getCurrentSongPath();
 
-        int directoryIndex = computeDirectoryIndexOfPath(currentSongPath);
+        int directoryIndex = computeDirectoryIndexOfPath(currentSongPath, 0);
         // Obtain the index of which directory contains the current song being played
         int songIndexInDirectory = getIndexOfSong();
         // Obtain the index of the current song being played within the above directory
@@ -2100,13 +2060,16 @@ public class UI extends JFrame implements ActionListener {
         // Obtain the thumbnail, track name, and artist name from the 2D array storing this information:
         // - The first dimension of elements are directories of songs
         // - The second dimension of elements are songs
-        String thumbnailPath = songThumbnailPaths.get(directoryIndex).get(songIndexInDirectory);
-        String trackName = songTrackNames.get(directoryIndex).get(songIndexInDirectory);
-        String artistName = songArtistNames.get(directoryIndex).get(songIndexInDirectory);
+        if (directoryIndex != -1) {
+            String thumbnailPath = songThumbnailPaths.get(directoryIndex).get(songIndexInDirectory);
+            String trackName = songTrackNames.get(directoryIndex).get(songIndexInDirectory);
+            String artistName = songArtistNames.get(directoryIndex).get(songIndexInDirectory);
 
-        currentSongThumbnail.setIcon(createImageIcon(thumbnailPath));
-        currentSongTitle.setText(trackName);
-        currentSongArtist.setText(artistName);
+            currentSongThumbnail.setIcon(createImageIcon(thumbnailPath));
+            currentSongTitle.setText(trackName);
+            currentSongArtist.setText(artistName);
+        }
+
     }
 
     /**
@@ -2116,13 +2079,51 @@ public class UI extends JFrame implements ActionListener {
      * @param songPath
      * @return the index of the relevant directory; -1 if the song is not part of any SongDirectory in this UI
      */
-    private int computeDirectoryIndexOfPath(String songPath) {
-        for (int i = 0; i < songDirectories.size(); i++) {
-            if (songDirectories.get(i).getSongs().contains(songPath)) {
-                return i;
-            }
+    // Recursive implementation to determine the directory index of a song path
+    private int computeDirectoryIndexOfPath(String songPath, int currentIndex) {
+        if (currentIndex >= songDirectories.size()) {
+            return -1; // Base case: no more directories to check
         }
-        return -1;
+
+        if (songDirectories.get(currentIndex).getSongs().contains(songPath)) {
+            return currentIndex; // Song found in the current directory
+            // (Checking if the song you care
+            // about is in the current directory), and if it is,
+        }
+
+        return computeDirectoryIndexOfPath(songPath, currentIndex + 1); // Recursive case: check the next directory
+    }
+
+    private void createButtonsRecursively(String[] files, int x, int y, int width, int height, int spacing, int index) {
+        if (index >= files.length) {
+            return; // Base case: no more files to process
+        }
+
+        icon_paths.add(files[index]);
+
+        JButton button = new JButton("");
+        button.setBounds(x + (index * spacing), y, width, height);
+        button.setIcon(createImageIcon(files[index]));
+        button.setBorderPainted(false);
+        button.setFocusPainted(false);
+        button.setOpaque(false);
+
+        JPanel page = new JPanel(null);
+        page.setBounds(0, 0, getWidth(), getHeight());
+        page.setBackground(Color.BLACK);
+        page.setVisible(false);
+        add(page);
+        pages.add(page);
+
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                showPage(page);
+            }
+        });
+
+        mainPanel.add(button);
+
+        createButtonsRecursively(files, x, y, width, height, spacing, index + 1); // Recursive case: process next file
     }
 
     protected static ImageIcon createImageIcon(String path) {
@@ -2142,15 +2143,17 @@ public class UI extends JFrame implements ActionListener {
 
         if (musicPlaying) {
             // Match the song currently playing with its associated directory:
-            int currentSongDirectoryPlayedFrom = computeDirectoryIndexOfPath(musicPlayer.getCurrentSongPath());
+            int currentSongDirectoryPlayedFrom = computeDirectoryIndexOfPath(musicPlayer.getCurrentSongPath(), 0);
             sampleSongPlaying = currentSongDirectoryPlayedFrom == songDirectories.size() - 1;
 
             // Note: This statement will evaluate to true ONLY if the main 3 sample pieces are not playing.
             if (!sampleSongPlaying) {
                 // Match the song currently playing with its exact position in its corresponding song directory:
                 indexOfSong = getIndexOfSong(currentSongDirectoryPlayedFrom);
-                // Take reference of the button corresponding to that song:
-                buttonToSet = allPagePlayPauseButtons.get(currentSongDirectoryPlayedFrom).get(indexOfSong);
+                if (indexOfSong != -1) {
+                    // Take reference of the button corresponding to that song:
+                    buttonToSet = allPagePlayPauseButtons.get(currentSongDirectoryPlayedFrom).get(indexOfSong);
+                }
             }
 
             if (source == skipButton) {
@@ -2173,8 +2176,10 @@ public class UI extends JFrame implements ActionListener {
                         // Set next song ("current of next") button icon to pause
                         indexOfSong++;  // the next button is in a position greater by only 1 index
                         // If there is still a song to skip to, then no IndexError should occur
-                        buttonToSet = allPagePlayPauseButtons.get(currentSongDirectoryPlayedFrom).get(indexOfSong);
-                        buttonToSet.setIcon(createImageIcon("pause_1.png"));
+                        if (currentSongDirectoryPlayedFrom != -1) {
+                            buttonToSet = allPagePlayPauseButtons.get(currentSongDirectoryPlayedFrom).get(indexOfSong);
+                            buttonToSet.setIcon(createImageIcon("pause_1.png"));
+                        }
                     }
                 }
             } else if (source == prevButton) {
@@ -2185,9 +2190,11 @@ public class UI extends JFrame implements ActionListener {
                         SongQueue historyQueue = musicPlayer.getHistoryQueue();
                         historyQueue.clearSongQueue();
                         for (int count = 0; count < indexOfSong; count++) {
-                            int directoryIndex = computeDirectoryIndexOfPath(musicPlayer.getCurrentSongPath());
-                            String songPath = songDirectories.get(directoryIndex).getSongs().get(count);
-                            historyQueue.addSongToFront(songPath);
+                            int directoryIndex = computeDirectoryIndexOfPath(musicPlayer.getCurrentSongPath(), 0);
+                            if (directoryIndex != -1) {
+                                String songPath = songDirectories.get(directoryIndex).getSongs().get(count);
+                                historyQueue.addSongToFront(songPath);
+                            }
                         }
                     }
                 }
