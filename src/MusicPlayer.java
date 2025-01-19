@@ -21,7 +21,7 @@ public class MusicPlayer {
         historyQueue = new SongQueue();
 
         // Fill up the song queue:
-        String folderPath = "src/Songs";
+        String folderPath = "src/Songs/ALL SONGS/Sample Songs";
         File folder = new File(folderPath);
 
         // Check if the folder exists and is a directory
