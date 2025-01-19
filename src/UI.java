@@ -81,6 +81,7 @@ public class UI extends JFrame implements ActionListener {
 
         currentSongThumbnail.setIcon(createImageIcon("zoots.png"));
         currentSongThumbnail.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        currentSongThumbnail.setFocusPainted(false);
         currentSongThumbnail.setContentAreaFilled(false);
         currentSongThumbnail.addActionListener(this);
         bottomLeftBar.add(currentSongThumbnail);
@@ -341,6 +342,7 @@ public class UI extends JFrame implements ActionListener {
         DM1_1.setBounds(200, 362, 100, 100);
         DM1_1.setIcon(createImageIcon("superhero.png"));
         DM1_1.setBorder(BorderFactory.createEmptyBorder());
+        DM1_1.setFocusPainted(false);
         DM1_1.setContentAreaFilled(false);
         DM1_1.addActionListener(this);
 
@@ -348,6 +350,7 @@ public class UI extends JFrame implements ActionListener {
         DM1_2.setBounds(200, 462, 100, 100);
         DM1_2.setIcon(createImageIcon("lildemons.png"));
         DM1_2.setBorder(BorderFactory.createEmptyBorder());
+        DM1_2.setFocusPainted(false);
         DM1_2.setContentAreaFilled(false);
         DM1_2.addActionListener(this);
 
@@ -355,6 +358,7 @@ public class UI extends JFrame implements ActionListener {
         DM1_3.setBounds(200, 562, 100, 100);
         DM1_3.setIcon(createImageIcon("headlines.png"));
         DM1_3.setBorder(BorderFactory.createEmptyBorder());
+        DM1_3.setFocusPainted(false);
         DM1_3.setContentAreaFilled(false);
         DM1_3.addActionListener(this);
 
@@ -362,6 +366,7 @@ public class UI extends JFrame implements ActionListener {
         DM1_4.setBounds(200, 662, 100, 100);
         DM1_4.setIcon(createImageIcon("norolemodelz.png"));
         DM1_4.setBorder(BorderFactory.createEmptyBorder());
+        DM1_4.setFocusPainted(false);
         DM1_4.setContentAreaFilled(false);
         DM1_4.addActionListener(this);
 
@@ -369,6 +374,7 @@ public class UI extends JFrame implements ActionListener {
         DM1_5.setBounds(200, 762, 100, 100);
         DM1_5.setIcon(createImageIcon("zoots.png"));
         DM1_5.setBorder(BorderFactory.createEmptyBorder());
+        DM1_5.setFocusPainted(false);
         DM1_5.setContentAreaFilled(false);
         DM1_5.addActionListener(this);
 
@@ -521,6 +527,7 @@ public class UI extends JFrame implements ActionListener {
         DM2_1.setBounds(200, 362, 100, 100);
         DM2_1.setIcon(createImageIcon("onedance.png"));
         DM2_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_1.setFocusPainted(false);
         DM2_1.setContentAreaFilled(false);
         DM2_1.addActionListener(this);
 
@@ -528,6 +535,7 @@ public class UI extends JFrame implements ActionListener {
         DM2_2.setBounds(200, 462, 100, 100);
         DM2_2.setIcon(createImageIcon("oneofwun.png"));
         DM2_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_2.setFocusPainted(false);
         DM2_2.setContentAreaFilled(false);
         DM2_2.addActionListener(this);
 
@@ -535,6 +543,7 @@ public class UI extends JFrame implements ActionListener {
         DM2_3.setBounds(200, 562, 100, 100);
         DM2_3.setIcon(createImageIcon("myeyes.png"));
         DM2_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_3.setFocusPainted(false);
         DM2_3.setContentAreaFilled(false);
         DM2_3.addActionListener(this);
 
@@ -542,6 +551,7 @@ public class UI extends JFrame implements ActionListener {
         DM2_4.setBounds(200, 662, 100, 100);
         DM2_4.setIcon(createImageIcon("solo.png"));
         DM2_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_4.setFocusPainted(false);
         DM2_4.setContentAreaFilled(false);
         DM2_4.addActionListener(this);
 
@@ -549,6 +559,7 @@ public class UI extends JFrame implements ActionListener {
         DM2_5.setBounds(200, 762, 100, 100);
         DM2_5.setIcon(createImageIcon("congrats.png"));
         DM2_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM2_5.setFocusPainted(false);
         DM2_5.setContentAreaFilled(false);
         DM2_5.addActionListener(this);
 
@@ -629,7 +640,7 @@ public class UI extends JFrame implements ActionListener {
         DailyMix3_TextInfo_song3.setForeground(Color.WHITE);
         DailyMix3_TextInfo_song3.setBounds(290, 582, 500, 50);
 
-        JLabel DailyMix3_TextInfo2_song3 = new JLabel("Karan Aujia");
+        JLabel DailyMix3_TextInfo2_song3 = new JLabel("Karan Aujla");
         DailyMix3_TextInfo2_song3.setFont(new Font("Arial", Font.ITALIC, 15));
         DailyMix3_TextInfo2_song3.setForeground(Color.GRAY);
         DailyMix3_TextInfo2_song3.setBounds(290, 605, 600, 50);
@@ -669,7 +680,7 @@ public class UI extends JFrame implements ActionListener {
         DailyMix3_TextInfo_song5.setForeground(Color.WHITE);
         DailyMix3_TextInfo_song5.setBounds(290, 782, 500, 50);
 
-        JLabel DailyMix3_TextInfo2_song5 = new JLabel("Karan Aujia, Ikky");
+        JLabel DailyMix3_TextInfo2_song5 = new JLabel("Karan Aujla, Ikky");
         DailyMix3_TextInfo2_song5.setFont(new Font("Arial", Font.ITALIC, 15));
         DailyMix3_TextInfo2_song5.setForeground(Color.GRAY);
         DailyMix3_TextInfo2_song5.setBounds(290, 805, 600, 50);
@@ -696,6 +707,7 @@ public class UI extends JFrame implements ActionListener {
         DM3_1.setBounds(200, 362, 100, 100);
         DM3_1.setIcon(createImageIcon("excuses.png"));
         DM3_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_1.setFocusPainted(false);
         DM3_1.setContentAreaFilled(false);
         DM3_1.addActionListener(this);
 
@@ -703,6 +715,7 @@ public class UI extends JFrame implements ActionListener {
         DM3_2.setBounds(200, 462, 100, 100);
         DM3_2.setIcon(createImageIcon("8asle.png"));
         DM3_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_2.setFocusPainted(false);
         DM3_2.setContentAreaFilled(false);
         DM3_2.addActionListener(this);
 
@@ -710,6 +723,7 @@ public class UI extends JFrame implements ActionListener {
         DM3_3.setBounds(200, 562, 100, 100);
         DM3_3.setIcon(createImageIcon("wavy.png"));
         DM3_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_3.setFocusPainted(false);
         DM3_3.setContentAreaFilled(false);
         DM3_3.addActionListener(this);
 
@@ -717,6 +731,7 @@ public class UI extends JFrame implements ActionListener {
         DM3_4.setBounds(200, 662, 100, 100);
         DM3_4.setIcon(createImageIcon("naina.png"));
         DM3_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_4.setFocusPainted(false);
         DM3_4.setContentAreaFilled(false);
         DM3_4.addActionListener(this);
 
@@ -724,6 +739,7 @@ public class UI extends JFrame implements ActionListener {
         DM3_5.setBounds(200, 762, 100, 100);
         DM3_5.setIcon(createImageIcon("aujila.png"));
         DM3_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM3_5.setFocusPainted(false);
         DM3_5.setContentAreaFilled(false);
         DM3_5.addActionListener(this);
 
@@ -872,6 +888,7 @@ public class UI extends JFrame implements ActionListener {
         DM4_1.setBounds(200, 362, 100, 100);
         DM4_1.setIcon(createImageIcon("Die.png"));
         DM4_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_1.setFocusPainted(false);
         DM4_1.setContentAreaFilled(false);
         DM4_1.addActionListener(this);
 
@@ -879,6 +896,7 @@ public class UI extends JFrame implements ActionListener {
         DM4_2.setBounds(200, 462, 100, 100);
         DM4_2.setIcon(createImageIcon("Frankocean.png"));
         DM4_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_2.setFocusPainted(false);
         DM4_2.setContentAreaFilled(false);
         DM4_2.addActionListener(this);
 
@@ -886,6 +904,7 @@ public class UI extends JFrame implements ActionListener {
         DM4_3.setBounds(200, 562, 100, 100);
         DM4_3.setIcon(createImageIcon("Dreamin.png"));
         DM4_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_3.setFocusPainted(false);
         DM4_3.setContentAreaFilled(false);
         DM4_3.addActionListener(this);
 
@@ -893,6 +912,7 @@ public class UI extends JFrame implements ActionListener {
         DM4_4.setBounds(200, 662, 100, 100);
         DM4_4.setIcon(createImageIcon("Herway.png"));
         DM4_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_4.setFocusPainted(false);
         DM4_4.setContentAreaFilled(false);
         DM4_4.addActionListener(this);
 
@@ -900,6 +920,7 @@ public class UI extends JFrame implements ActionListener {
         DM4_5.setBounds(200, 762, 100, 100);
         DM4_5.setIcon(createImageIcon("Chrisbrown.png"));
         DM4_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        DM4_5.setFocusPainted(false);
         DM4_5.setContentAreaFilled(false);
         DM4_5.addActionListener(this);
 
@@ -949,6 +970,7 @@ public class UI extends JFrame implements ActionListener {
         LR_1.setBounds(200, 362, 100, 100);
         LR_1.setIcon(createImageIcon("winningspeech.png"));
         LR_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_1.setFocusPainted(false);
         LR_1.setContentAreaFilled(false);
         LR_1.addActionListener(this);
 
@@ -956,6 +978,7 @@ public class UI extends JFrame implements ActionListener {
         LR_2.setBounds(200, 462, 100, 100);
         LR_2.setIcon(createImageIcon("itsup.png"));
         LR_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_2.setFocusPainted(false);
         LR_2.setContentAreaFilled(false);
         LR_2.addActionListener(this);
 
@@ -963,6 +986,7 @@ public class UI extends JFrame implements ActionListener {
         LR_3.setBounds(200, 562, 100, 100);
         LR_3.setIcon(createImageIcon("notlikeus.png"));
         LR_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_3.setFocusPainted(false);
         LR_3.setContentAreaFilled(false);
         LR_3.addActionListener(this);
 
@@ -970,6 +994,7 @@ public class UI extends JFrame implements ActionListener {
         LR_4.setBounds(200, 662, 100, 100);
         LR_4.setIcon(createImageIcon("lilbaby.png"));
         LR_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_4.setFocusPainted(false);
         LR_4.setContentAreaFilled(false);
         LR_4.addActionListener(this);
 
@@ -977,6 +1002,7 @@ public class UI extends JFrame implements ActionListener {
         LR_5.setBounds(200, 762, 100, 100);
         LR_5.setIcon(createImageIcon("myeyes.png"));
         LR_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        LR_5.setFocusPainted(false);
         LR_5.setContentAreaFilled(false);
         LR_5.addActionListener(this);
 
@@ -1119,6 +1145,7 @@ public class UI extends JFrame implements ActionListener {
         BM_1.setBounds(200, 362, 100, 100);
         BM_1.setIcon(createImageIcon("glock.png"));
         BM_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_1.setFocusPainted(false);
         BM_1.setContentAreaFilled(false);
         BM_1.addActionListener(this);
 
@@ -1126,6 +1153,7 @@ public class UI extends JFrame implements ActionListener {
         BM_2.setBounds(200, 462, 100, 100);
         BM_2.setIcon(createImageIcon("purecoke.png"));
         BM_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_2.setFocusPainted(false);
         BM_2.setContentAreaFilled(false);
         BM_2.addActionListener(this);
 
@@ -1133,6 +1161,7 @@ public class UI extends JFrame implements ActionListener {
         BM_3.setBounds(200, 562, 100, 100);
         BM_3.setIcon(createImageIcon("astroworld.png"));
         BM_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_3.setFocusPainted(false);
         BM_3.setContentAreaFilled(false);
         BM_3.addActionListener(this);
 
@@ -1140,6 +1169,7 @@ public class UI extends JFrame implements ActionListener {
         BM_4.setBounds(200, 662, 100, 100);
         BM_4.setIcon(createImageIcon("Toreup.png"));
         BM_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_4.setFocusPainted(false);
         BM_4.setContentAreaFilled(false);
         BM_4.addActionListener(this);
 
@@ -1147,6 +1177,7 @@ public class UI extends JFrame implements ActionListener {
         BM_5.setBounds(200, 762, 100, 100);
         BM_5.setIcon(createImageIcon("nonstop.png"));
         BM_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        BM_5.setFocusPainted(false);
         BM_5.setContentAreaFilled(false);
         BM_5.addActionListener(this);
 
@@ -1296,6 +1327,7 @@ public class UI extends JFrame implements ActionListener {
         HH_1.setBounds(200, 362, 100, 100);
         HH_1.setIcon(createImageIcon("Morning.png"));
         HH_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_1.setFocusPainted(false);
         HH_1.setContentAreaFilled(false);
         HH_1.addActionListener(this);
 
@@ -1303,6 +1335,7 @@ public class UI extends JFrame implements ActionListener {
         HH_2.setBounds(200, 462, 100, 100);
         HH_2.setIcon(createImageIcon("kehlani.png"));
         HH_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_2.setFocusPainted(false);
         HH_2.setContentAreaFilled(false);
         HH_2.addActionListener(this);
 
@@ -1310,6 +1343,7 @@ public class UI extends JFrame implements ActionListener {
         HH_3.setBounds(200, 562, 100, 100);
         HH_3.setIcon(createImageIcon("madeforme.png"));
         HH_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_3.setFocusPainted(false);
         HH_3.setContentAreaFilled(false);
         HH_3.addActionListener(this);
 
@@ -1317,6 +1351,7 @@ public class UI extends JFrame implements ActionListener {
         HH_4.setBounds(200, 662, 100, 100);
         HH_4.setIcon(createImageIcon("timeless.png"));
         HH_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_4.setFocusPainted(false);
         HH_4.setContentAreaFilled(false);
         HH_4.addActionListener(this);
 
@@ -1324,6 +1359,7 @@ public class UI extends JFrame implements ActionListener {
         HH_5.setBounds(200, 762, 100, 100);
         HH_5.setIcon(createImageIcon("saturn.png"));
         HH_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        HH_5.setFocusPainted(false);
         HH_5.setContentAreaFilled(false);
         HH_5.addActionListener(this);
 
@@ -1469,6 +1505,7 @@ public class UI extends JFrame implements ActionListener {
         SAG_1.setBounds(200, 362, 100, 100);
         SAG_1.setIcon(createImageIcon("tujh.png"));
         SAG_1.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_1.setFocusPainted(false);
         SAG_1.setContentAreaFilled(false);
         SAG_1.addActionListener(this);
 
@@ -1476,6 +1513,7 @@ public class UI extends JFrame implements ActionListener {
         SAG_2.setBounds(200, 462, 100, 100);
         SAG_2.setIcon(createImageIcon("hayyoda.png"));
         SAG_2.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_2.setFocusPainted(false);
         SAG_2.setContentAreaFilled(false);
         SAG_2.addActionListener(this);
 
@@ -1483,6 +1521,7 @@ public class UI extends JFrame implements ActionListener {
         SAG_3.setBounds(200, 562, 100, 100);
         SAG_3.setIcon(createImageIcon("jimmiki.png"));
         SAG_3.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_3.setFocusPainted(false);
         SAG_3.setContentAreaFilled(false);
         SAG_3.addActionListener(this);
 
@@ -1490,6 +1529,7 @@ public class UI extends JFrame implements ActionListener {
         SAG_4.setBounds(200, 662, 100, 100);
         SAG_4.setIcon(createImageIcon("chut.png"));
         SAG_4.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_4.setFocusPainted(false);
         SAG_4.setContentAreaFilled(false);
         SAG_4.addActionListener(this);
 
@@ -1497,6 +1537,7 @@ public class UI extends JFrame implements ActionListener {
         SAG_5.setBounds(200, 762, 100, 100);
         SAG_5.setIcon(createImageIcon("fazat.png"));
         SAG_5.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        SAG_5.setFocusPainted(false);
         SAG_5.setContentAreaFilled(false);
         SAG_5.addActionListener(this);
 
@@ -1628,6 +1669,7 @@ public class UI extends JFrame implements ActionListener {
             iconImages.setBounds(80, 110, 200, 200);
             iconImages.setIcon(createImageIcon(icon_paths.get(i)));
             iconImages.setBorder(BorderFactory.createEmptyBorder());
+            iconImages.setFocusPainted(false);
             iconImages.setContentAreaFilled(false);
             iconImages.addActionListener(this);
 
@@ -1636,6 +1678,7 @@ public class UI extends JFrame implements ActionListener {
             ClockButton.setBounds(1012, 372, 50, 50);
             ClockButton.setIcon(createImageIcon("clock_icon.png"));
             ClockButton.setBorder(BorderFactory.createEmptyBorder());
+            ClockButton.setFocusPainted(false);
             ClockButton.setContentAreaFilled(false);
             ClockButton.addActionListener(this);
 
@@ -1662,6 +1705,7 @@ public class UI extends JFrame implements ActionListener {
                 playPausePg.setIcon(createImageIcon("play_1.png"));
                 playPausePg.setBorder(BorderFactory.createEmptyBorder());
                 playPausePg.setContentAreaFilled(false);
+                playPausePg.setFocusPainted(false);
                 playPausePg.addActionListener(this);
                 current_page.add(playPausePg);
                 pagePlayButtons.add(playPausePg);
@@ -1789,7 +1833,7 @@ public class UI extends JFrame implements ActionListener {
         // Song three
         addSongDetails(pageIndex,
                 "Wavy",
-                "Karan Aujia",
+                "Karan Aujla",
                 "wavy.png");
 
         // Song four
@@ -1801,7 +1845,7 @@ public class UI extends JFrame implements ActionListener {
         // Song five
         addSongDetails(pageIndex,
                 "Jee Ni Lagda",
-                "Karan Aujia, Ikky",
+                "Karan Aujla, Ikky",
                 "aujila.png");
         pageIndex++;
 
@@ -2225,18 +2269,7 @@ public class UI extends JFrame implements ActionListener {
             }
         }
 
-        // Home Page (pageView == -1)
-        /*
-         * - pageView != -1 means not on home page
-         * - pagePlayPauseButtons is a 2D ArrayList containing ArrayLists of JButton objects
-         * - The inner arraylist represents the collection of JButton objects for individual pages
-         * - The if-condition intends to check if the source (i.e. the button being clicked) is indeed
-         *   part of the particular page's buttons (this means the user isn't going to click on some button
-         *   (in the home page and suddenly the button on the cover art page is activated, or something strange).
-         *
-         * Overall: Checks if the playPauseButton is activated (the same one as on the home page)
-         *          or if the individual buttons to each cover art page is being activated.
-         */
+
         if (source == playPauseButton || (pageView != -1 && allPagePlayPauseButtons.get(pageView).contains(source))) {
 
             // If this section is reached, then the above condition guarantees that <source> is a JButton object
