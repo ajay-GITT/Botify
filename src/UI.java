@@ -2082,7 +2082,7 @@ public class UI extends JFrame implements ActionListener {
      */
     private int getIndexOfSong() {
         String currentSongPath = musicPlayer.getCurrentSongPath();
-        return songDirectories.get(computeDirectoryIndexOfCurrentSong(currentSongPath)).getSongs().indexOf(currentSongPath);
+        return songDirectories.get(computeDirectoryIndexOfPath(currentSongPath)).getSongs().indexOf(currentSongPath);
     }
 
     /**
@@ -2092,7 +2092,7 @@ public class UI extends JFrame implements ActionListener {
     private void updateSongInfo() {
         String currentSongPath = musicPlayer.getCurrentSongPath();
 
-        int directoryIndex = computeDirectoryIndexOfCurrentSong(currentSongPath);
+        int directoryIndex = computeDirectoryIndexOfPath(currentSongPath);
         // Obtain the index of which directory contains the current song being played
         int songIndexInDirectory = getIndexOfSong();
         // Obtain the index of the current song being played within the above directory
@@ -2116,7 +2116,7 @@ public class UI extends JFrame implements ActionListener {
      * @param songPath
      * @return the index of the relevant directory; -1 if the song is not part of any SongDirectory in this UI
      */
-    private int computeDirectoryIndexOfCurrentSong(String songPath) {
+    private int computeDirectoryIndexOfPath(String songPath) {
         for (int i = 0; i < songDirectories.size(); i++) {
             if (songDirectories.get(i).getSongs().contains(songPath)) {
                 return i;
@@ -2142,7 +2142,7 @@ public class UI extends JFrame implements ActionListener {
 
         if (musicPlaying) {
             // Match the song currently playing with its associated directory:
-            int currentSongDirectoryPlayedFrom = computeDirectoryIndexOfCurrentSong(musicPlayer.getCurrentSongPath());
+            int currentSongDirectoryPlayedFrom = computeDirectoryIndexOfPath(musicPlayer.getCurrentSongPath());
             sampleSongPlaying = currentSongDirectoryPlayedFrom == songDirectories.size() - 1;
 
             // Note: This statement will evaluate to true ONLY if the main 3 sample pieces are not playing.
@@ -2179,10 +2179,21 @@ public class UI extends JFrame implements ActionListener {
                 }
             } else if (source == prevButton) {
                 // Go to the previous song:
+                if (!sampleSongPlaying) {
+                    indexOfSong = getIndexOfSong();
+                    if (indexOfSong > 0) {  // Playing the 2nd or 3rd or 4th or 5th song
+                        SongQueue historyQueue = musicPlayer.getHistoryQueue();
+                        historyQueue.clearSongQueue();
+                        for (int count = 0; count < indexOfSong; count++) {
+                            int directoryIndex = computeDirectoryIndexOfPath(musicPlayer.getCurrentSongPath());
+                            String songPath = songDirectories.get(directoryIndex).getSongs().get(count);
+                            historyQueue.addSongToFront(songPath);
+                        }
+                    }
+                }
+
                 // If it is NOT the case that the user has songs to go previous to,
                 // then there must be songs remaining in the history queue.
-                if (!not)
-
                 if (!(musicPlayer.getHistoryQueue().isEmpty() && !("".equals(musicPlayer.getCurrentSongPath())))) {
                     if (!sampleSongPlaying) {
                         buttonToSet.setIcon(createImageIcon("play_1.png"));
