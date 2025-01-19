@@ -951,7 +951,7 @@ public class UI extends JFrame implements ActionListener {
         HottestHits_Text3.setForeground(Color.GRAY);
         HottestHits_Text3.setBounds(292, 218, 500, 50);
 
-        JLabel HottestHits_Text4 = new JLabel("5 songs, 17m 53s");
+        JLabel HottestHits_Text4 = new JLabel("5 songs, 19m 27s");
         HottestHits_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits_Text4.setForeground(Color.GRAY);
         HottestHits_Text4.setBounds(292, 236, 300, 50);
@@ -1127,12 +1127,12 @@ public class UI extends JFrame implements ActionListener {
         HottestHits2_Text2.setBounds(290, 150, 300, 50);
 
 
-        JLabel HottestHits2_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
+        JLabel HottestHits2_Text3 = new JLabel("Featuring: 21 Savage, Don Toliver, Travis Scott, & More!");
         HottestHits2_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits2_Text3.setForeground(Color.GRAY);
         HottestHits2_Text3.setBounds(292, 218, 500, 50);
 
-        JLabel HottestHits2_Text4 = new JLabel("5 songs, 17m 53s");
+        JLabel HottestHits2_Text4 = new JLabel("5 songs, 14m 47s");
         HottestHits2_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits2_Text4.setForeground(Color.GRAY);
         HottestHits2_Text4.setBounds(292, 236, 300, 50);
@@ -1309,12 +1309,12 @@ public class UI extends JFrame implements ActionListener {
         HottestHits3_Text2.setBounds(290, 150, 300, 50);
 
 
-        JLabel HottestHits3_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
+        JLabel HottestHits3_Text3 = new JLabel("Featuring: PARTYNEXTDOOR, SZA, The Weeknd, & More!");
         HottestHits3_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits3_Text3.setForeground(Color.GRAY);
         HottestHits3_Text3.setBounds(292, 218, 500, 50);
 
-        JLabel HottestHits3_Text4 = new JLabel("5 songs, 17m 53s");
+        JLabel HottestHits3_Text4 = new JLabel("5 songs, 15m 21s");
         HottestHits3_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits3_Text4.setForeground(Color.GRAY);
         HottestHits3_Text4.setBounds(292, 236, 300, 50);
@@ -1487,12 +1487,12 @@ public class UI extends JFrame implements ActionListener {
         HottestHits4_Text2.setBounds(290, 150, 300, 50);
 
 
-        JLabel HottestHits4_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
+        JLabel HottestHits4_Text3 = new JLabel("Featuring: Priya Mali, Roop Kumar Rathod, Anirudh Ravichander, & More!");
         HottestHits4_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits4_Text3.setForeground(Color.GRAY);
-        HottestHits4_Text3.setBounds(292, 218, 500, 50);
+        HottestHits4_Text3.setBounds(292, 218, 600, 50);
 
-        JLabel HottestHits4_Text4 = new JLabel("5 songs, 17m 53s");
+        JLabel HottestHits4_Text4 = new JLabel("5 songs, 18m 36s");
         HottestHits4_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits4_Text4.setForeground(Color.GRAY);
         HottestHits4_Text4.setBounds(292, 236, 300, 50);
@@ -2029,13 +2029,13 @@ public class UI extends JFrame implements ActionListener {
         // Song two
         addSongDetails(pageIndex,
                 "MIDDLE CHILD",
-                "sampleArtist2",
+                "J. Cole",
                 "madeforme.png");
 
         // Song three
         addSongDetails(pageIndex,
-                "sampleSong3",
-                "sampleArtist3",
+                "Life Goes On",
+                "Lil Baby, Gunna, Lil Uzi Vert",
                 "Toreup.png");
     }
 
