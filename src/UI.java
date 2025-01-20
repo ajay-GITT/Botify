@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public class UI extends JFrame implements ActionListener {
     public JButton playPauseButton;
-    public JButton IconButton;
     public JButton skipButton, prevButton;
     public JButton homeButton;
     public JButton ClockButton;
@@ -59,8 +58,11 @@ public class UI extends JFrame implements ActionListener {
         mainPanel.setBackground(Color.BLACK);
         add(mainPanel);
 
-
-
+        blackPage = new JPanel(null);
+        blackPage.setBounds(0, 0, getWidth(), getHeight());
+        blackPage.setBackground(Color.BLACK);
+        blackPage.setVisible(false);
+        add(blackPage);
 
         JLabel logoLabel = new JLabel(createImageIcon("botify_logo.png")); // Replace with the logo file name
         logoLabel.setBounds(10, 10, 100, 80); // Adjust position and size of the logo
@@ -121,15 +123,6 @@ public class UI extends JFrame implements ActionListener {
         playPauseButton.setBorder(BorderFactory.createEmptyBorder());
         playPauseButton.setContentAreaFilled(false);
         playPauseButton.addActionListener(this);
-
-
-        IconButton = new JButton();
-        IconButton.setBounds(1090, 25, 100, 60);
-        IconButton.setIcon(createImageIcon("IconButton.png"));
-        IconButton.setBorder(BorderFactory.createEmptyBorder());
-        IconButton.setContentAreaFilled(false);
-        IconButton.addActionListener(this);
-        mainPanel.add(IconButton);
 
         // Skip Button:
         skipButton = new JButton();
@@ -958,7 +951,7 @@ public class UI extends JFrame implements ActionListener {
         HottestHits_Text3.setForeground(Color.GRAY);
         HottestHits_Text3.setBounds(292, 218, 500, 50);
 
-        JLabel HottestHits_Text4 = new JLabel("5 songs, 19m 27s");
+        JLabel HottestHits_Text4 = new JLabel("5 songs, 17m 53s");
         HottestHits_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits_Text4.setForeground(Color.GRAY);
         HottestHits_Text4.setBounds(292, 236, 300, 50);
@@ -1134,12 +1127,12 @@ public class UI extends JFrame implements ActionListener {
         HottestHits2_Text2.setBounds(290, 150, 300, 50);
 
 
-        JLabel HottestHits2_Text3 = new JLabel("Featuring: 21 Savage, Don Toliver, Travis Scott, & More!");
+        JLabel HottestHits2_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
         HottestHits2_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits2_Text3.setForeground(Color.GRAY);
         HottestHits2_Text3.setBounds(292, 218, 500, 50);
 
-        JLabel HottestHits2_Text4 = new JLabel("5 songs, 14m 47s");
+        JLabel HottestHits2_Text4 = new JLabel("5 songs, 17m 53s");
         HottestHits2_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits2_Text4.setForeground(Color.GRAY);
         HottestHits2_Text4.setBounds(292, 236, 300, 50);
@@ -1316,12 +1309,12 @@ public class UI extends JFrame implements ActionListener {
         HottestHits3_Text2.setBounds(290, 150, 300, 50);
 
 
-        JLabel HottestHits3_Text3 = new JLabel("Featuring: PARTYNEXTDOOR, SZA, The Weeknd, & More!");
+        JLabel HottestHits3_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
         HottestHits3_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits3_Text3.setForeground(Color.GRAY);
         HottestHits3_Text3.setBounds(292, 218, 500, 50);
 
-        JLabel HottestHits3_Text4 = new JLabel("5 songs, 15m 21s");
+        JLabel HottestHits3_Text4 = new JLabel("5 songs, 17m 53s");
         HottestHits3_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits3_Text4.setForeground(Color.GRAY);
         HottestHits3_Text4.setBounds(292, 236, 300, 50);
@@ -1494,12 +1487,12 @@ public class UI extends JFrame implements ActionListener {
         HottestHits4_Text2.setBounds(290, 150, 300, 50);
 
 
-        JLabel HottestHits4_Text3 = new JLabel("Featuring: Priya Mali, Roop Kumar Rathod, Anirudh Ravichander, & More!");
+        JLabel HottestHits4_Text3 = new JLabel("Featuring: XXX, XXX, XXX, & More!");
         HottestHits4_Text3.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits4_Text3.setForeground(Color.GRAY);
-        HottestHits4_Text3.setBounds(292, 218, 600, 50);
+        HottestHits4_Text3.setBounds(292, 218, 500, 50);
 
-        JLabel HottestHits4_Text4 = new JLabel("5 songs, 18m 36s");
+        JLabel HottestHits4_Text4 = new JLabel("5 songs, 17m 53s");
         HottestHits4_Text4.setFont(new Font("Arial", Font.BOLD, 14));
         HottestHits4_Text4.setForeground(Color.GRAY);
         HottestHits4_Text4.setBounds(292, 236, 300, 50);
@@ -2026,7 +2019,8 @@ public class UI extends JFrame implements ActionListener {
         songArtistNames.add(new ArrayList<String>());
         songThumbnailPaths.add(new ArrayList<String>());
 
-        // todo: change details to true details
+
+
         // Song one
         addSongDetails(pageIndex,
                 "PUFFIN ON ZOOTIEZ",
@@ -2034,16 +2028,66 @@ public class UI extends JFrame implements ActionListener {
                 "zoots.png");
 
         // Song two
+
         addSongDetails(pageIndex,
-                "MIDDLE CHILD",
-                "J. Cole",
-                "madeforme.png");
+                "Rockstar Made",
+                "Playboi Carti",
+                "rockstar.png");
 
         // Song three
         addSongDetails(pageIndex,
+                "MIDDLE CHILD",
+                "J. Cole",
+                "middlechild.png");
+        // Song four
+        addSongDetails(pageIndex,
                 "Life Goes On",
                 "Lil Baby, Gunna, Lil Uzi Vert",
-                "Toreup.png");
+                "life.png");
+
+        // Song five
+        addSongDetails(pageIndex,
+                "GBP",
+                "Central Cee, 21 Savage",
+                "gbp.png");
+
+
+        // Song six
+        addSongDetails(pageIndex,
+                "Fallin' Apart",
+                "Karan Aujla",
+                "fallingapart.png");
+
+
+        // Song Seven
+        addSongDetails(pageIndex,
+                "What Would Pluto Do",
+                "Drake",
+                "dogs.png");
+
+        // Song eight
+        addSongDetails(pageIndex,
+                "What's Next",
+                "Drake",
+                "whatsnext.png");
+
+
+
+        // Song nine
+        addSongDetails(pageIndex,
+                "HIM ALL ALONG",
+                "Gunna",
+                "allalong.png");
+
+
+        // Song ten
+        addSongDetails(pageIndex,
+                "The Perc & Stripper Joint",
+                "Future",
+                "percs.png");
+
+
+
     }
 
     private void addSongDetails(int pageIndex, String trackName, String artistName, String thumbnailPath) {
