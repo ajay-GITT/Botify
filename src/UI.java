@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class UI extends JFrame implements ActionListener {
     public JButton playPauseButton;
+    public JButton IconButton;
     public JButton skipButton, prevButton;
     public JButton homeButton;
     public JButton ClockButton;
@@ -58,11 +59,8 @@ public class UI extends JFrame implements ActionListener {
         mainPanel.setBackground(Color.BLACK);
         add(mainPanel);
 
-        blackPage = new JPanel(null);
-        blackPage.setBounds(0, 0, getWidth(), getHeight());
-        blackPage.setBackground(Color.BLACK);
-        blackPage.setVisible(false);
-        add(blackPage);
+
+
 
         JLabel logoLabel = new JLabel(createImageIcon("botify_logo.png")); // Replace with the logo file name
         logoLabel.setBounds(10, 10, 100, 80); // Adjust position and size of the logo
@@ -123,6 +121,15 @@ public class UI extends JFrame implements ActionListener {
         playPauseButton.setBorder(BorderFactory.createEmptyBorder());
         playPauseButton.setContentAreaFilled(false);
         playPauseButton.addActionListener(this);
+
+
+        IconButton = new JButton();
+        IconButton.setBounds(1090, 25, 100, 60);
+        IconButton.setIcon(createImageIcon("IconButton.png"));
+        IconButton.setBorder(BorderFactory.createEmptyBorder());
+        IconButton.setContentAreaFilled(false);
+        IconButton.addActionListener(this);
+        mainPanel.add(IconButton);
 
         // Skip Button:
         skipButton = new JButton();
